@@ -1,2 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_C8Qi4L-iEeeD8LzMStNfqQ" name="assignment1"/>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_C8Qi4L-iEeeD8LzMStNfqQ" name="assignment1">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_sd568L-rEeeD8LzMStNfqQ" name="Operator"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_tbkdEL-rEeeD8LzMStNfqQ" name="System"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_u_26UL-rEeeD8LzMStNfqQ" name="addMissionToQueue"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_w3fKUL-rEeeD8LzMStNfqQ" name="startRobot"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_yIFPgL-rEeeD8LzMStNfqQ" name="stopRobot"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_yzJlwL-rEeeD8LzMStNfqQ" name="acquirePositionalData"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_0amrwL-rEeeD8LzMStNfqQ" name="calculateRewardPoints"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_A1Jg4L-sEeeD8LzMStNfqQ" memberEnd="_A1VHEL-sEeeD8LzMStNfqQ _A1XjUL-sEeeD8LzMStNfqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_A1MkML-sEeeD8LzMStNfqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_A1NLQL-sEeeD8LzMStNfqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_A1VHEL-sEeeD8LzMStNfqQ" name="calculaterewardpoints" type="_0amrwL-rEeeD8LzMStNfqQ" association="_A1Jg4L-sEeeD8LzMStNfqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_A1XjUL-sEeeD8LzMStNfqQ" name="system" type="_tbkdEL-rEeeD8LzMStNfqQ" association="_A1Jg4L-sEeeD8LzMStNfqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DtK24L-sEeeD8LzMStNfqQ" memberEnd="_DtMFAr-sEeeD8LzMStNfqQ _DtMsEL-sEeeD8LzMStNfqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DtMFAL-sEeeD8LzMStNfqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_DtMFAb-sEeeD8LzMStNfqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_DtMFAr-sEeeD8LzMStNfqQ" name="acquirepositionaldata" type="_yzJlwL-rEeeD8LzMStNfqQ" association="_DtK24L-sEeeD8LzMStNfqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_DtMsEL-sEeeD8LzMStNfqQ" name="system" type="_tbkdEL-rEeeD8LzMStNfqQ" association="_DtK24L-sEeeD8LzMStNfqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IZZVcL-sEeeD8LzMStNfqQ" memberEnd="_IZZ8gr-sEeeD8LzMStNfqQ _IZajkL-sEeeD8LzMStNfqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IZZ8gL-sEeeD8LzMStNfqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IZZ8gb-sEeeD8LzMStNfqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_IZZ8gr-sEeeD8LzMStNfqQ" name="stoprobot" type="_yIFPgL-rEeeD8LzMStNfqQ" association="_IZZVcL-sEeeD8LzMStNfqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_IZajkL-sEeeD8LzMStNfqQ" name="operator" type="_sd568L-rEeeD8LzMStNfqQ" association="_IZZVcL-sEeeD8LzMStNfqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_KvTc4L-sEeeD8LzMStNfqQ" memberEnd="_KvUrAr-sEeeD8LzMStNfqQ _KvVSEL-sEeeD8LzMStNfqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KvUrAL-sEeeD8LzMStNfqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KvUrAb-sEeeD8LzMStNfqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KvUrAr-sEeeD8LzMStNfqQ" name="startrobot" type="_w3fKUL-rEeeD8LzMStNfqQ" association="_KvTc4L-sEeeD8LzMStNfqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KvVSEL-sEeeD8LzMStNfqQ" name="operator" type="_sd568L-rEeeD8LzMStNfqQ" association="_KvTc4L-sEeeD8LzMStNfqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_McbGAL-sEeeD8LzMStNfqQ" memberEnd="_McbtEr-sEeeD8LzMStNfqQ _MccUIL-sEeeD8LzMStNfqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_McbtEL-sEeeD8LzMStNfqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_McbtEb-sEeeD8LzMStNfqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_McbtEr-sEeeD8LzMStNfqQ" name="addmissiontoqueue" type="_u_26UL-rEeeD8LzMStNfqQ" association="_McbGAL-sEeeD8LzMStNfqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_MccUIL-sEeeD8LzMStNfqQ" name="operator" type="_sd568L-rEeeD8LzMStNfqQ" association="_McbGAL-sEeeD8LzMStNfqQ"/>
+  </packagedElement>
+</uml:Model>
