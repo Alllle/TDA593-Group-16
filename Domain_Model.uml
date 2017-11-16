@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_KDZOgMBvEeeEa-pzwypVfQ" name="Interface">
+  <packagedElement xmi:type="uml:Class" xmi:id="_BV_TIMVJEeeEa-pzwypVfQ" name="Reward"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UtIG8MVJEeeEa-pzwypVfQ" name="Robot"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Yq5kEMVJEeeEa-pzwypVfQ" name="Environment"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jDrVwMVJEeeEa-pzwypVfQ" name="Physical"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kTUYsMVJEeeEa-pzwypVfQ" name="Logical">
+    <generalization xmi:type="uml:Generalization" xmi:id="_UftxgMVTEee6xdiJbe190A" general="_Yq5kEMVJEeeEa-pzwypVfQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rKcBgMVJEeeEa-pzwypVfQ" name="Mission"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rnUx0MVJEeeEa-pzwypVfQ" name="Strategy"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sTc4AMVJEeeEa-pzwypVfQ" name="Event"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zTX3gMVJEeeEa-pzwypVfQ" name="Controller"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NwvuMMVKEeeEa-pzwypVfQ" name="Blind">
+    <generalization xmi:type="uml:Generalization" xmi:id="_y-UB8MVTEee6xdiJbe190A" general="_PZur8MVPEeeB4u6H7j2sIg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Qym8sMVKEeeEa-pzwypVfQ" name="GUI"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_e6pOYMVKEeeEa-pzwypVfQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_iJBO4MVKEeeEa-pzwypVfQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PZur8MVPEeeB4u6H7j2sIg" name="Interface"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bkv3UMVPEeeB4u6H7j2sIg" name="Operator"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hiEKUMVPEeeB4u6H7j2sIg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mCLfgMVPEeeB4u6H7j2sIg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SwCrAMVQEeeB4u6H7j2sIg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_X9mVAMVQEeeB4u6H7j2sIg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pVGMUMVQEeeB4u6H7j2sIg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_q9cDIMVQEeeB4u6H7j2sIg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vXU0gMVQEeeB4u6H7j2sIg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_x4JygMVQEeeB4u6H7j2sIg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_d89vEMVTEee6xdiJbe190A"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3JBu4MVTEee6xdiJbe190A"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_K2HkkMVUEee6xdiJbe190A" client="_rKcBgMVJEeeEa-pzwypVfQ" supplier="_Yq5kEMVJEeeEa-pzwypVfQ"/>
+</uml:Model>
