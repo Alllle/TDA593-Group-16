@@ -32,13 +32,20 @@ public class Main {
 	AbstractWall roomWall4 = new VerticalWall(1f, -4.5f, -1f, e);
 	e.add(roomWall4);
 	Set<Robot> robots = new HashSet<>();
-	Robot robot1 = new Robot(new Point(0, 0), "Robot 1");
-	Robot robot2 = new Robot(new Point(1, 3), "Robot 2");
+	Robot robot1 = new Robot(new Point(6, -4), "Robot 1");
+	Robot robot2 = new Robot(new Point(6, -2), "Robot 2");
+	Robot robot3 = new Robot(new Point(6, 0), "Robot 3");
+	Robot robot4 = new Robot(new Point(6, 2), "Robot 4");
 	robots.add(robot1);
 	robots.add(robot2);
+	robots.add(robot3);
+	robots.add(robot4);
 	
-	robot1.setDestination(new Point(4,2));
+	//robot1.setDestination(new Point(4,2));
 	
-	SimulatorController controller = new Controller(robots, e);
+	EnvironmentFactory en = new EnvironmentFactory();
+	Area area = en.makeEnvironment("assignment3");
+	
+	SimulatorController controller = new Controller(robots, area.getArea());
 	}
 }

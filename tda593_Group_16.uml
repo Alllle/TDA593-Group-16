@@ -166,6 +166,10 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Rtd9Mc1zEee4oNKddcTgcw" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ECwR8M15Eee4oNKddcTgcw" name="environment" visibility="private" type="_QIFJMM1yEee4oNKddcTgcw"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YDQR4M7kEeeOOKRey_4Vag" name="enviromentfactory" type="_FYJTEM7jEeeOOKRey_4Vag" association="_YDC2gM7kEeeOOKRey_4Vag">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YDT8QM7kEeeOOKRey_4Vag" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YDUjUM7kEeeOOKRey_4Vag" value="1"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_9z90cM14Eee4oNKddcTgcw" name="registerView" visibility="private">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_9z90cc14Eee4oNKddcTgcw" name="view" type="_yhsTIM1xEee4oNKddcTgcw"/>
       </ownedOperation>
@@ -221,5 +225,22 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_d1sL4M12Eee4oNKddcTgcw" name="Area" isAbstract="true"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_FYJTEM7jEeeOOKRey_4Vag" name="EnviromentFactory" visibility="public" isAbstract="true">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Pul3kM7lEeeOOKRey_4Vag" name="makeEnvironment" isAbstract="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Pul3kc7lEeeOOKRey_4Vag" type="_QIFJMM1yEee4oNKddcTgcw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_o6lbYM7kEeeOOKRey_4Vag" name="AssignmentRoom3" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_p5F1kM7lEeeOOKRey_4Vag" name="makeEnvironment">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_p5F1kc7lEeeOOKRey_4Vag" type="_QIFJMM1yEee4oNKddcTgcw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Realization" xmi:id="_xWR_4M7lEeeOOKRey_4Vag" client="_o6lbYM7kEeeOOKRey_4Vag" supplier="_FYJTEM7jEeeOOKRey_4Vag"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_YDC2gM7kEeeOOKRey_4Vag" memberEnd="_YDQR4M7kEeeOOKRey_4Vag _YDUjUc7kEeeOOKRey_4Vag">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YDN1oM7kEeeOOKRey_4Vag" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YDOcsM7kEeeOOKRey_4Vag" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_YDUjUc7kEeeOOKRey_4Vag" name="controller" type="_v1RwMM1xEee4oNKddcTgcw" association="_YDC2gM7kEeeOOKRey_4Vag"/>
   </packagedElement>
 </uml:Model>
