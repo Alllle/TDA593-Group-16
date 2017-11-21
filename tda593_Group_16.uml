@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_dG_FEM1xEee4oNKddcTgcw" name="TDA593-Group-16">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_lI0VYM6hEeeexou2H9X39g">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_7mOWkM6hEeeexou2H9X39g">
+    <importedPackage xmi:type="uml:Model" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_DV8nkBv8EduZN5aJJITI5w"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qB3KoM1yEee4oNKddcTgcw" memberEnd="_qB8qMM1yEee4oNKddcTgcw _qCFNEM1yEee4oNKddcTgcw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qB5m4M1yEee4oNKddcTgcw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qB6N8M1yEee4oNKddcTgcw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qCFNEM1yEee4oNKddcTgcw" name="controller" type="_v1RwMM1xEee4oNKddcTgcw" association="_qB3KoM1yEee4oNKddcTgcw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qB8qMM1yEee4oNKddcTgcw" name="view" visibility="private" type="_yhsTIM1xEee4oNKddcTgcw" association="_qB3KoM1yEee4oNKddcTgcw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qCCJwM1yEee4oNKddcTgcw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qCD-8M1yEee4oNKddcTgcw" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0tSLgM1yEee4oNKddcTgcw" memberEnd="_0tTZos1yEee4oNKddcTgcw _0tUAss1yEee4oNKddcTgcw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0tTZoM1yEee4oNKddcTgcw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0tTZoc1yEee4oNKddcTgcw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0tUAss1yEee4oNKddcTgcw" name="gui" type="_z-VQQM1xEee4oNKddcTgcw" association="_0tSLgM1yEee4oNKddcTgcw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2G0KQM1yEee4oNKddcTgcw" memberEnd="_2G0xUs1yEee4oNKddcTgcw _2G1YYs1yEee4oNKddcTgcw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2G0xUM1yEee4oNKddcTgcw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2G0xUc1yEee4oNKddcTgcw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2G1YYs1yEee4oNKddcTgcw" name="speech" type="_zNV4MM1xEee4oNKddcTgcw" association="_2G0KQM1yEee4oNKddcTgcw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ENOrUM1zEee4oNKddcTgcw" memberEnd="_ENPSYM1zEee4oNKddcTgcw _ENPSY81zEee4oNKddcTgcw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ENOrUc1zEee4oNKddcTgcw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ENOrUs1zEee4oNKddcTgcw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ENPSY81zEee4oNKddcTgcw" name="controller" type="_v1RwMM1xEee4oNKddcTgcw" association="_ENOrUM1zEee4oNKddcTgcw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Qdm30M1zEee4oNKddcTgcw" memberEnd="_Qdne4s1zEee4oNKddcTgcw _QdoF8s1zEee4oNKddcTgcw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Qdne4M1zEee4oNKddcTgcw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Qdne4c1zEee4oNKddcTgcw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QdoF8s1zEee4oNKddcTgcw" name="controller" type="_v1RwMM1xEee4oNKddcTgcw" association="_Qdm30M1zEee4oNKddcTgcw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RtcvEM1zEee4oNKddcTgcw" memberEnd="_RtdWIs1zEee4oNKddcTgcw _Rtd9Ms1zEee4oNKddcTgcw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RtdWIM1zEee4oNKddcTgcw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RtdWIc1zEee4oNKddcTgcw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Rtd9Ms1zEee4oNKddcTgcw" name="controller" type="_v1RwMM1xEee4oNKddcTgcw" association="_RtcvEM1zEee4oNKddcTgcw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_c3DgwM1zEee4oNKddcTgcw" client="_LTGXQM1yEee4oNKddcTgcw" supplier="_QIFJMM1yEee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mLJF0M10Eee4oNKddcTgcw" name="Set&lt;Robot>"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IGNAoM12Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_PJ2pkM12Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_72lzsM12Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EZzx8M13Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_PQOh4M13Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XtqoQM13Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fcSrYM14Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2B3xIM14Eee4oNKddcTgcw" memberEnd="_2B4YMs14Eee4oNKddcTgcw _2B4_Qs14Eee4oNKddcTgcw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_2B4YMM14Eee4oNKddcTgcw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_2B4YMc14Eee4oNKddcTgcw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_2B4_Qs14Eee4oNKddcTgcw" name="missioncontroller" type="_ID86sM1yEee4oNKddcTgcw" association="_2B3xIM14Eee4oNKddcTgcw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JkYHcM15Eee4oNKddcTgcw" memberEnd="_JkZVkc15Eee4oNKddcTgcw _JkZ8oc15Eee4oNKddcTgcw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JkYugM15Eee4oNKddcTgcw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JkZVkM15Eee4oNKddcTgcw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JkZ8oc15Eee4oNKddcTgcw" name="environment" type="_QIFJMM1yEee4oNKddcTgcw" association="_JkYHcM15Eee4oNKddcTgcw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_LiFKQM15Eee4oNKddcTgcw" client="_YDW9sM1yEee4oNKddcTgcw" supplier="_d1sL4M12Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_ML4VMM15Eee4oNKddcTgcw" client="_XAkrAM1yEee4oNKddcTgcw" supplier="_d1sL4M12Eee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_SwaZMM15Eee4oNKddcTgcw" client="_z-VQQM1xEee4oNKddcTgcw" supplier="_yhsTIM1xEee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_TUxqgM15Eee4oNKddcTgcw" client="_zNV4MM1xEee4oNKddcTgcw" supplier="_yhsTIM1xEee4oNKddcTgcw"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2d39sM6WEeeexou2H9X39g" name="Boolean"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_cenfAM6ZEeeexou2H9X39g"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_kvLnAM6ZEeeexou2H9X39g" name="Point"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_We7YAM6aEeeexou2H9X39g" memberEnd="_WfD64M6aEeeexou2H9X39g _WfEh8c6aEeeexou2H9X39g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WfCFsM6aEeeexou2H9X39g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WfCFsc6aEeeexou2H9X39g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_WfEh8c6aEeeexou2H9X39g" name="robot" type="_5POiIM1xEee4oNKddcTgcw" association="_We7YAM6aEeeexou2H9X39g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QUfcwM6fEeeexou2H9X39g" memberEnd="_QUgD0s6fEeeexou2H9X39g _QUgq4s6fEeeexou2H9X39g">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QUgD0M6fEeeexou2H9X39g" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QUgD0c6fEeeexou2H9X39g" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QUgq4s6fEeeexou2H9X39g" name="robot" type="_5POiIM1xEee4oNKddcTgcw" association="_QUfcwM6fEeeexou2H9X39g"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ppEikM6jEeeexou2H9X39g" name="tda593">
+    <packagedElement xmi:type="uml:Class" xmi:id="_YDW9sM1yEee4oNKddcTgcw" name="LogArea"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_5POiIM1xEee4oNKddcTgcw" name="Robot" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="___gJ0M12Eee4oNKddcTgcw" name="position" visibility="private" type="_kvLnAM6ZEeeexou2H9X39g"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WfD64M6aEeeexou2H9X39g" name="mission" visibility="private" type="_LTGXQM1yEee4oNKddcTgcw" association="_We7YAM6aEeeexou2H9X39g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WfD64c6aEeeexou2H9X39g" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WfEh8M6aEeeexou2H9X39g" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QUgD0s6fEeeexou2H9X39g" name="strategy" visibility="private" type="_CSwAUM6fEeeexou2H9X39g" association="_QUfcwM6fEeeexou2H9X39g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QUgq4M6fEeeexou2H9X39g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QUgq4c6fEeeexou2H9X39g" value="1"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_QX0cEM13Eee4oNKddcTgcw" name="changeStrategy" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QX0cEc13Eee4oNKddcTgcw" name="strategy" type="_CSwAUM6fEeeexou2H9X39g"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_YNQHQM13Eee4oNKddcTgcw" name="getPosition" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YNQHQc13Eee4oNKddcTgcw" name="position" type="_kvLnAM6ZEeeexou2H9X39g" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_bFgt0M13Eee4oNKddcTgcw" name="notify" visibility="public"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZNm54M6cEeeexou2H9X39g" name="getBatteryStatus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LgGZUM6iEeeexou2H9X39g" name="batteryStatus" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KiOYoM6eEeeexou2H9X39g" name="stopEverything"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_zNV4MM1xEee4oNKddcTgcw" name="Speech">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2G0xUs1yEee4oNKddcTgcw" name="robot" type="_5POiIM1xEee4oNKddcTgcw" association="_2G0KQM1yEee4oNKddcTgcw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2G1YYM1yEee4oNKddcTgcw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2G1YYc1yEee4oNKddcTgcw" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_HmrhIM14Eee4oNKddcTgcw" name="actionToSpeech"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XAkrAM1yEee4oNKddcTgcw" name="PhysArea"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yhsTIM1xEee4oNKddcTgcw" name="View" visibility="public" isAbstract="true">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_BwOEEM14Eee4oNKddcTgcw" name="update" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9YDFEM6XEeeexou2H9X39g" name="addMission" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_KjADcM6YEeeexou2H9X39g" name="removeMission" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ADVX4M6eEeeexou2H9X39g" name="stopEverything" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_F6QDQM1yEee4oNKddcTgcw" name="RewardSystem">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_60Y3MM1zEee4oNKddcTgcw" name="rewardPoints" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3dnjcM6WEeeexou2H9X39g" name="calculationProcedureA" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nUwZQM10Eee4oNKddcTgcw" name="calculatePoints" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nUwZQc10Eee4oNKddcTgcw" name="robots" visibility="private" type="_mLJF0M10Eee4oNKddcTgcw"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_r8TzMM10Eee4oNKddcTgcw" name="getPoints"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7RXIkM6bEeeexou2H9X39g" name="notify" visibility="private"/>
+      <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_UbaUsM10Eee4oNKddcTgcw" name="int"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_z-VQQM1xEee4oNKddcTgcw" name="GUI">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0tTZos1yEee4oNKddcTgcw" name="robot" type="_5POiIM1xEee4oNKddcTgcw" association="_0tSLgM1yEee4oNKddcTgcw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0tUAsM1yEee4oNKddcTgcw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0tUAsc1yEee4oNKddcTgcw" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CSwAUM6fEeeexou2H9X39g" name="Strategy" isAbstract="true">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_q9i_AM6fEeeexou2H9X39g" name="sort" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q9i_Ac6fEeeexou2H9X39g" name="points" type="_kvLnAM6ZEeeexou2H9X39g"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0DDK8M6fEeeexou2H9X39g" name="sortedPoints" type="_kvLnAM6ZEeeexou2H9X39g" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_v1RwMM1xEee4oNKddcTgcw" name="Controller">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ENPSYM1zEee4oNKddcTgcw" name="robot" visibility="private" type="_5POiIM1xEee4oNKddcTgcw" association="_ENOrUM1zEee4oNKddcTgcw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ENPSYc1zEee4oNKddcTgcw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ENPSYs1zEee4oNKddcTgcw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Qdne4s1zEee4oNKddcTgcw" name="missioncontroller" visibility="private" type="_ID86sM1yEee4oNKddcTgcw" association="_Qdm30M1zEee4oNKddcTgcw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QdoF8M1zEee4oNKddcTgcw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QdoF8c1zEee4oNKddcTgcw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RtdWIs1zEee4oNKddcTgcw" name="rewardsystem" visibility="private" type="_F6QDQM1yEee4oNKddcTgcw" association="_RtcvEM1zEee4oNKddcTgcw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Rtd9MM1zEee4oNKddcTgcw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Rtd9Mc1zEee4oNKddcTgcw" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ECwR8M15Eee4oNKddcTgcw" name="environment" visibility="private" type="_QIFJMM1yEee4oNKddcTgcw"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9z90cM14Eee4oNKddcTgcw" name="registerView" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9z90cc14Eee4oNKddcTgcw" name="view" type="_yhsTIM1xEee4oNKddcTgcw"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__nY54M14Eee4oNKddcTgcw" name="notify" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_B_75YM6cEeeexou2H9X39g" name="getPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__qpDsM6gEeeexou2H9X39g" name="rewardPoints" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ID86sM1yEee4oNKddcTgcw" name="MissionController">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gbfekM14Eee4oNKddcTgcw" name="robots" visibility="private" type="_5POiIM1xEee4oNKddcTgcw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZYGdMM6dEeeexou2H9X39g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZYJggM6dEeeexou2H9X39g" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2B4YMs14Eee4oNKddcTgcw" name="mission" visibility="private" type="_LTGXQM1yEee4oNKddcTgcw" association="_2B3xIM14Eee4oNKddcTgcw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2B4_QM14Eee4oNKddcTgcw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2B4_Qc14Eee4oNKddcTgcw" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0S4AEM11Eee4oNKddcTgcw" name="addMission" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0S4AEc11Eee4oNKddcTgcw" name="mission" type="_LTGXQM1yEee4oNKddcTgcw"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0S4AEs11Eee4oNKddcTgcw" name="robot" type="_5POiIM1xEee4oNKddcTgcw"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5vQwQM11Eee4oNKddcTgcw" name="removeMission" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5vQwQc11Eee4oNKddcTgcw" name="mission" type="_LTGXQM1yEee4oNKddcTgcw"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5vQwQs11Eee4oNKddcTgcw" name="robot" type="_5POiIM1xEee4oNKddcTgcw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_LTGXQM1yEee4oNKddcTgcw" name="Mission">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JZaU8M12Eee4oNKddcTgcw" name="points" visibility="private" type="_kvLnAM6ZEeeexou2H9X39g">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qFSwEM6ZEeeexou2H9X39g"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qFWacM6ZEeeexou2H9X39g" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PUwSAM12Eee4oNKddcTgcw" name="isCompleted" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LpBzMM6fEeeexou2H9X39g" name="getPoints">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XN2Z4M6iEeeexou2H9X39g" name="points" type="_kvLnAM6ZEeeexou2H9X39g" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QIFJMM1yEee4oNKddcTgcw" name="Environment">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JkZVkc15Eee4oNKddcTgcw" name="area" type="_d1sL4M12Eee4oNKddcTgcw" association="_JkYHcM15Eee4oNKddcTgcw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JkZVks15Eee4oNKddcTgcw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JkZ8oM15Eee4oNKddcTgcw" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_d1sL4M12Eee4oNKddcTgcw" name="Area" isAbstract="true"/>
+  </packagedElement>
+</uml:Model>
