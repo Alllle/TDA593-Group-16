@@ -6,6 +6,7 @@ public class Robot extends AbstractRobot {
 	Point position;
 	String name;
 	Mission mission;
+	private boolean isMoving;
 	
 	public Robot(Point position, String name) {
 		super(position, name);
@@ -14,8 +15,23 @@ public class Robot extends AbstractRobot {
 	}
 	
 	public void executeMission(){
-		this.setDestination(this.mission.getPoint());
+		int counter = 0;
+		Point temp = this.position;
+		Point[] points = this.mission.getPoints();
+		isMoving = false;
+		while(counter < points.length) {
+			if(!isMoving) {
+				temp = points[counter];
+				this.setDestination(points[counter]);
+				isMoving = true;
+			}
+			if(this.isAtPosition(temp)) {
+				counter++;
+				isMoving = false;
+			}
+		}
 	}
+
 	
 	public void assignMission(Mission mission){
 		this.mission = mission;

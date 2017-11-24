@@ -4,15 +4,21 @@ import project.Point;
 
 public class Mission {
 	
-	Point point;
-
-	public void addPoint(Point point){
-		this.point = point;
+	private Point[] points;
+	private int id;
+	
+	public Mission(Point[] points, int id) {
+		this.points = points;
+		this.id = id;
 	}
 	
-	public Point getPoint() {
+	public Point[] getPoints() {
 		// TODO Auto-generated method stub
-		return point;
+		return this.points;
+	}
+	
+	public int getId() {
+		return this.id;
 	}
 
 }
