@@ -3,9 +3,9 @@ import project.AbstractRobot;
 import project.Point;
 
 public class Robot extends AbstractRobot {
-	Point position;
-	String name;
-	Mission mission;
+	private Point position;
+	private String name;
+	private Mission mission;
 	private boolean isMoving;
 	
 	public Robot(Point position, String name) {
@@ -14,7 +14,14 @@ public class Robot extends AbstractRobot {
 		this.name = name;
 	}
 	
-	public void executeMission(){
+	public Robot(Point position, String name, Mission mission) {
+		super(position, name);
+		this.position = position;
+		this.name = name;
+		this.mission = mission;
+	}
+	
+	/*public void executeMission(){
 		int counter = 0;
 		Point temp = this.position;
 		Point[] points = this.mission.getPoints();
@@ -30,11 +37,16 @@ public class Robot extends AbstractRobot {
 				isMoving = false;
 			}
 		}
+	}*/
+	
+	public void executeMission() {
+		this.setDestination(mission.getPoints()[0]);
 	}
 
 	
 	public void assignMission(Mission mission){
 		this.mission = mission;
+		executeMission();
 	}
 	
 	
