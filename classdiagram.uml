@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_sO9DMNSXEeefPZdaWwFbGA" name="classdiagram">
+  <packagedElement xmi:type="uml:Class" xmi:id="_uRxPgNSXEeefPZdaWwFbGA" name="Controller">
+    <generalization xmi:type="uml:Generalization" xmi:id="_HXDnANSaEeefPZdaWwFbGA" general="_HWNScNSaEeefPZdaWwFbGA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TtQqsNTGEeefPZdaWwFbGA" name="views" visibility="private" type="_PXNw8NSZEeefPZdaWwFbGA" isReadOnly="true">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WbWBkNTGEeefPZdaWwFbGA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WbqxsNTGEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_okvP4NTGEeefPZdaWwFbGA" name="missions" visibility="private" type="_3fh_kNSXEeefPZdaWwFbGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qaFn8NTGEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qaepgNTGEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_647jgNTHEeefPZdaWwFbGA" name="robots" visibility="private" type="_v7LdUNSXEeefPZdaWwFbGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8KnN0NTHEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8Kxl4NTHEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_J5xsgNTIEeefPZdaWwFbGA" name="locControllers" visibility="private" type="_HWNScNSaEeefPZdaWwFbGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDE24NTIEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDOn4NTIEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_W_lsMNTIEeefPZdaWwFbGA" name="e" visibility="private" type="__kt-ANSXEeefPZdaWwFbGA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fVC7QNTIEeefPZdaWwFbGA" name="rs" visibility="private" type="_I4s1YNSZEeefPZdaWwFbGA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ST2XMNUHEeefPZdaWwFbGA" name="executeMission">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_YJn3wNUHEeefPZdaWwFbGA" name="robot" type="_v7LdUNSXEeefPZdaWwFbGA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_f8n6ANUHEeefPZdaWwFbGA" name="registerView">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_f8n6AdUHEeefPZdaWwFbGA" name="view" type="_PXNw8NSZEeefPZdaWwFbGA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Csv0kNUJEeefPZdaWwFbGA" name="notify">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_V2W_kNVSEeefPZdaWwFbGA" annotatedElement="_Csv0kNUJEeefPZdaWwFbGA">
+        <body>for each v in views, v.updateRobots(robots)</body>
+      </ownedComment>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_je-KUNVSEeefPZdaWwFbGA" name="addMission">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_je-KUdVSEeefPZdaWwFbGA" name="m" type="_3fh_kNSXEeefPZdaWwFbGA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_je-KUtVSEeefPZdaWwFbGA" name="r" type="_v7LdUNSXEeefPZdaWwFbGA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vzMVANVSEeefPZdaWwFbGA" name="removeMission">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vzMVAdVSEeefPZdaWwFbGA" name="r" type="_v7LdUNSXEeefPZdaWwFbGA"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_y_6IoNVSEeefPZdaWwFbGA" name="stopEverything"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_v7LdUNSXEeefPZdaWwFbGA" name="Robot">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mTMfENVKEeefPZdaWwFbGA" name="sensors" visibility="private" type="__gA6kNVPEeefPZdaWwFbGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_t-0uANVKEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uATUsNVKEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__INQ0NVKEeefPZdaWwFbGA" name="mission" visibility="private" type="_3fh_kNSXEeefPZdaWwFbGA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Bk_m4NVMEeefPZdaWwFbGA" name="robotId" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2DMZ0NVaEeefPZdaWwFbGA" name="missionPosition" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_pbxK0NVQEeefPZdaWwFbGA" name="getId">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pbxK0dVQEeefPZdaWwFbGA" name="id" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3YLbUNVQEeefPZdaWwFbGA" name="getSensors">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3YLbUdVQEeefPZdaWwFbGA" name="s" type="__gA6kNVPEeefPZdaWwFbGA" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__utocNVQEeefPZdaWwFbGA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__vBKcNVQEeefPZdaWwFbGA" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_888EYNVQEeefPZdaWwFbGA" name="getMission">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_888EYdVQEeefPZdaWwFbGA" name="m" type="_3fh_kNSXEeefPZdaWwFbGA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_77K50NVaEeefPZdaWwFbGA" name="getMissionPosition">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_77K50dVaEeefPZdaWwFbGA" name="p" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3fh_kNSXEeefPZdaWwFbGA" name="Mission">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_q0Tn4NVMEeefPZdaWwFbGA" name="point" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bIpDcNVQEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bI5iINVQEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ww0poNVMEeefPZdaWwFbGA" name="missionId" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_hxSV8NVREeefPZdaWwFbGA" name="getPoints">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hxSV8dVREeefPZdaWwFbGA" name="p" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kNPbANVREeefPZdaWwFbGA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kNnOcNVREeefPZdaWwFbGA" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_pGrPINVREeefPZdaWwFbGA" name="getId">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pGrPIdVREeefPZdaWwFbGA" name="id" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__kt-ANSXEeefPZdaWwFbGA" name="Environment">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_nwO9cNVNEeefPZdaWwFbGA" name="areas" visibility="private" type="_NNxNoNSYEeefPZdaWwFbGA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o3an8NVNEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o3rtsNVNEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_uXlaANVPEeefPZdaWwFbGA" name="getAreas">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_uXlaAdVPEeefPZdaWwFbGA" name="a" type="_NNxNoNSYEeefPZdaWwFbGA" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TltoENVREeefPZdaWwFbGA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TmGCkNVREeefPZdaWwFbGA" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_NNxNoNSYEeefPZdaWwFbGA" name="Area">
+    <generalization xmi:type="uml:Generalization" xmi:id="_3vfRsNSYEeefPZdaWwFbGA" general="_tV5nsNSYEeefPZdaWwFbGA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LBcoUNVOEeefPZdaWwFbGA" name="span" visibility="private" type="_wMZ4gNVNEeefPZdaWwFbGA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_b8YfcNVOEeefPZdaWwFbGA" name="environmentDescription" visibility="private" type="_tV5nsNSYEeefPZdaWwFbGA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_lfAsQNVOEeefPZdaWwFbGA" name="getEnvironment">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_lfAsQdVOEeefPZdaWwFbGA" name="e" type="_tV5nsNSYEeefPZdaWwFbGA" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3UPBYNVOEeefPZdaWwFbGA" name="getSpan">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_3UPBYdVOEeefPZdaWwFbGA" name="s" type="_wMZ4gNVNEeefPZdaWwFbGA" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QyTEUNSYEeefPZdaWwFbGA" name="LogicalArea">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_crSEgNSYEeefPZdaWwFbGA" client="_QyTEUNSYEeefPZdaWwFbGA" supplier="_NNxNoNSYEeefPZdaWwFbGA" contract="_NNxNoNSYEeefPZdaWwFbGA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SfuPcNSYEeefPZdaWwFbGA" name="PhysicalArea">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_i6hN8NSYEeefPZdaWwFbGA" client="_SfuPcNSYEeefPZdaWwFbGA" supplier="_NNxNoNSYEeefPZdaWwFbGA" contract="_NNxNoNSYEeefPZdaWwFbGA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZfjbMNVPEeefPZdaWwFbGA" name="addWall">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZfjbMdVPEeefPZdaWwFbGA" name="a">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZfjbMtVPEeefPZdaWwFbGA" name="b">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZfjbM9VPEeefPZdaWwFbGA" name="c">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pvm2cNSYEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tV5nsNSYEeefPZdaWwFbGA" name="EnvironmentDescription" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="__Dfq0NSYEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_DF030NSZEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_E3qB0NSZEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I4s1YNSZEeefPZdaWwFbGA" name="RewardSystem">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fYoxoNVTEeefPZdaWwFbGA" name="rewardPoint" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_mDW9MNVTEeefPZdaWwFbGA" name="procedureA" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IHCd8NVUEeefPZdaWwFbGA" name="setProcedure" visibility="private">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_IHCd8dVUEeefPZdaWwFbGA" name="procedure">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CVlVUNVXEeefPZdaWwFbGA" name="getRewardPoint">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_CVlVUdVXEeefPZdaWwFbGA" name="rewardPoint" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_L-hW0NSZEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Msf3INSZEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_PXNw8NSZEeefPZdaWwFbGA" name="View">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__HbeQNUJEeefPZdaWwFbGA" name="controller" visibility="private" type="_uRxPgNSXEeefPZdaWwFbGA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_siqpUNVbEeefPZdaWwFbGA" name="rewardPoints" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KYXnANUKEeefPZdaWwFbGA" name="updateRobots">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KYXnAdUKEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SuWE0NSZEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_eqOA8NSZEeefPZdaWwFbGA" name="GUI">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_mOnmgNSZEeefPZdaWwFbGA" client="_eqOA8NSZEeefPZdaWwFbGA" supplier="_PXNw8NSZEeefPZdaWwFbGA" contract="_PXNw8NSZEeefPZdaWwFbGA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VK21YNVbEeefPZdaWwFbGA" name="updateRobots">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_VK3ccNVbEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VK4DgNVbEeefPZdaWwFbGA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VK4DgdVbEeefPZdaWwFbGA" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_qizYgNSZEeefPZdaWwFbGA" name="Speach">
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zELjsNSZEeefPZdaWwFbGA" client="_qizYgNSZEeefPZdaWwFbGA" supplier="_PXNw8NSZEeefPZdaWwFbGA" contract="_PXNw8NSZEeefPZdaWwFbGA"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VLEQwNVbEeefPZdaWwFbGA" name="updateRobots">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_VLE30NVbEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VLFe4NVbEeefPZdaWwFbGA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VLFe4dVbEeefPZdaWwFbGA" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AjqnoNSaEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_HWNScNSaEeefPZdaWwFbGA" name="LocationController" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yQY50NSaEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_0pZ_oNSaEeefPZdaWwFbGA" name="AbstractRobot" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_0qYQANSaEeefPZdaWwFbGA" client="_v7LdUNSXEeefPZdaWwFbGA" supplier="_0pZ_oNSaEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wMZ4gNVNEeefPZdaWwFbGA" name="Span">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_33WK8NVNEeefPZdaWwFbGA" name="x" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7Qep8NVNEeefPZdaWwFbGA" name="y" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__ZNZ4NVNEeefPZdaWwFbGA" name="z" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CL1SgNVOEeefPZdaWwFbGA" name="w" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_xhW5QNVNEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="__gA6kNVPEeefPZdaWwFbGA" name="Sensors">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LZ5SoNVQEeefPZdaWwFbGA" name="getValue">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_LZ5SodVQEeefPZdaWwFbGA" name="v" type="__gA6kNVPEeefPZdaWwFbGA" direction="return">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fa2r4NVREeefPZdaWwFbGA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FbN4QNVREeefPZdaWwFbGA" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__hh9gNVPEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:AssociationClass" xmi:id="_rZTRsNVUEeefPZdaWwFbGA"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_s2Gm4NVUEeefPZdaWwFbGA" name="GPS">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_H0jNgNVZEeefPZdaWwFbGA" name="value" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JPapANVZEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JPvZINVZEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_udBhYNVUEeefPZdaWwFbGA" client="_s2Gm4NVUEeefPZdaWwFbGA" supplier="__gA6kNVPEeefPZdaWwFbGA" contract="__gA6kNVPEeefPZdaWwFbGA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ifBW8NVXEeefPZdaWwFbGA" name="Proximity">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_B2-b0NVZEeefPZdaWwFbGA" name="value" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EdYdYNVZEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ednt8NVZEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_k-C-INVXEeefPZdaWwFbGA" client="_ifBW8NVXEeefPZdaWwFbGA" supplier="__gA6kNVPEeefPZdaWwFbGA" contract="__gA6kNVPEeefPZdaWwFbGA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ntbVgNVXEeefPZdaWwFbGA" name="Camera">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yGkeINVYEeefPZdaWwFbGA" name="value" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1mBnkNVYEeefPZdaWwFbGA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1mStUNVYEeefPZdaWwFbGA" value="*"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_p0ZpENVXEeefPZdaWwFbGA" client="_ntbVgNVXEeefPZdaWwFbGA" supplier="__gA6kNVPEeefPZdaWwFbGA" contract="__gA6kNVPEeefPZdaWwFbGA"/>
+  </packagedElement>
+</uml:Model>
