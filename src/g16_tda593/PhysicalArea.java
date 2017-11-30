@@ -31,9 +31,9 @@ public class PhysicalArea extends Area {
 	 */
 	public void addWall(float a, float b, float c, char direction) {
 		if(direction == 'h') {
-			e.add(new HorizontalWall(a,b,c,e));
+			super.getEnvironment().add(new HorizontalWall(a,b,c,super.getEnvironment(), null));
 		}else {
-			e.add(new VerticalWall(a,b,c,e));
+			super.getEnvironment().add(new VerticalWall(a,b,c,super.getEnvironment(), null));
 		}
 	}
 
