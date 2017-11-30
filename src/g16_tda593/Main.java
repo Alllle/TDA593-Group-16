@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import project.Point;
-import project.SimulatorController;
+import project.AbstractSimulatorMonitor;
 import simbad.sim.AbstractWall;
 import simbad.sim.Boundary;
 import simbad.sim.EnvironmentDescription;
@@ -16,6 +16,15 @@ import simbad.sim.VerticalWall;
 
 public class Main {
 	public static void main(String[] args) throws InterruptedException {
+		
+		Environment e = new Environment();
+		
+		//Top left room
+		PhysicalArea area = new PhysicalArea(5.0f,5.0f,-5.0f,-5.0f);
+		area.addWall(5f, 3.5f, 5.0f, 'h');
+		
+		e.addRoom(area.getEnvironment());
+		
 		// Should this really be used?
 		/*EnvironmentDescription e = new EnvironmentDescription();
 		Boundary w1 = new HorizontalBoundary(-5.0f, -5.0f, 5.0f, e);
@@ -56,11 +65,6 @@ public class Main {
 
 	//robot1.setDestination(new Point(4,2));
 	
-	EnvironmentFactory en = new EnvironmentFactory();
-	Area area = en.makeEnvironment("assignment3");
-	
-	SimulatorController controller = new Controller(robots, area.getArea());
-	
 	/*robot1.setDestination(new Point(-3.5, -3.5));
 	robot2.setDestination(new Point(3.5, -3.5));
 	robot3.setDestination(new Point(-3.5, 3.5));
@@ -72,6 +76,7 @@ public class Main {
 	robot4.assignMission(missions.get(2));
 	robot3.assignMission(missions.get(3));
 	robot2.assignMission(missions.get(1));
+	
 	
 	}
 }
