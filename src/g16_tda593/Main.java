@@ -21,9 +21,9 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		
 		Set<RobotAvatar> robots = new HashSet<RobotAvatar>();
-		RobotAvatar robot1 = new RobotAvatar(new Point(0, -4), "Robot 1");
-		RobotAvatar robot2 = new RobotAvatar(new Point(0, -2), "Robot 2");
-		RobotAvatar robot3 = new RobotAvatar(new Point(0, 0), "Robot 3");
+		RobotAvatar robot1 = new RobotAvatar(new Point(6, -4), "Robot 1");
+		RobotAvatar robot2 = new RobotAvatar(new Point(6, -2), "Robot 2");
+		RobotAvatar robot3 = new RobotAvatar(new Point(6, 0), "Robot 3");
 		RobotAvatar robot4 = new RobotAvatar(new Point(6, 2), "Robot 4");
 		
 		Mission mission1 = new Mission(1);
