@@ -23,11 +23,11 @@ public abstract class Area {
 	/**
 	 * 
 	 */
-	public EnvironmentDescription e = new EnvironmentDescription();
+	private EnvironmentDescription e = new EnvironmentDescription();
 	/**
 	 * 
 	 */
-	public Span span;
+	private Span span;
 
 	/**
 	 * 
