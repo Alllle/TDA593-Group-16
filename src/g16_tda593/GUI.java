@@ -6,7 +6,7 @@ package g16_tda593;
 
 import java.util.Set;
 
-import g16_tda593.Robot;
+import g16_tda593.RobotAvatar;
 import g16_tda593.View;
 
 /************************************************************/
@@ -16,7 +16,7 @@ import g16_tda593.View;
 public class GUI implements View {
 
 	@Override
-	public void updateRobots(Set<Robot> robots) {
+	public void updateRobots(Set<RobotAvatar> robots) {
 		// TODO Auto-generated method stub
 		
 	}

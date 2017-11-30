@@ -13,7 +13,12 @@ import simbad.sim.EnvironmentDescription;
 /**
  * 
  */
-public class Environment extends EnvironmentDescription {
+public class Environment {
+	private EnvironmentDescription e;
+	
+	public Environment(EnvironmentDescription e) {
+		this.e = e;
+	}
 	/**
 	 * 
 	 */
@@ -27,6 +32,6 @@ public class Environment extends EnvironmentDescription {
 		return areas;
 	}
 	public void addRoom(EnvironmentDescription e) {
-		super.add(e);
+		this.e.add(e);
 	}
 };

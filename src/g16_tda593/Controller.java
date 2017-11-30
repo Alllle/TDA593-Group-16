@@ -11,19 +11,21 @@ import java.util.List;
 import java.util.Set;
 
 import project.AbstractRobotSimulator;
+import project.AbstractSimulatorMonitor;
 import project.LocationController;
 import project.Point;
+import g16_tda593.RobotAvatar;
+import simbad.sim.EnvironmentDescription;
 import g16_tda593.Environment;
 import g16_tda593.Mission;
 import g16_tda593.RewardSystem;
-import g16_tda593.Robot;
 import g16_tda593.View;
 
 /************************************************************/
 /**
  * 
  */
-public class Controller {
+public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	/**
 	 * 
 	 */
@@ -35,7 +37,7 @@ public class Controller {
 	/**
 	 * 
 	 */
-	private Set<AbstractRobotSimulator> robots;
+	private Set<RobotAvatar> robots;
 	/**
 	 * 
 	 */
@@ -43,39 +45,57 @@ public class Controller {
 	/**
 	 * 
 	 */
-	private Environment e;
+	private Environment environment;
 	/**
 	 * 
 	 */
 	private RewardSystem rs;
 	
-	public Controller() {
+	public Controller( Set<RobotAvatar> robots, EnvironmentDescription e) {
+		super(robots, e);
 		views = new ArrayList<View>();
 		missions = new LinkedList<Mission>();
-		robots = new HashSet<AbstractRobotSimulator>();
+		this.robots = robots;
 		locControllers = new ArrayList<LocationController>();
-		e = new Environment();
+		environment = new Environment(e);
 		rs = new RewardSystem();
+	}
+
+	@Override
+	public void update(RobotAvatar robot) {
 		
+
 	}
 	
 	public void addLocationController(LocationController lc) {
 		this.locControllers.add(lc);
 	}
 	
-	public HashSet<AbstractRobotSimulator> getRobots() {
-		return (HashSet<AbstractRobotSimulator>) this.robots;
+	public Set<RobotAvatar> getRobots() {
+		return this.robots;
+	}
+	
+	public void addRobot(RobotAvatar r) {
+		robots.add(r);
+	}
+	
+	public Environment getEnvironment() {
+		return this.environment;
 	}
 	
 	public void addMission(Mission m) {
 		this.missions.add(m);
+	}
+	
+	public ArrayList<Mission> getMissions() {
+		return (ArrayList<Mission>) this.missions;
 	}
 
 	/**
 	 * 
 	 * @param robot 
 	 */
-	public void executeMission(Robot robot) {
+	public void executeMission(RobotAvatar robot) {
 		if(robot.getMission() == null) {
 			robot.setDestination(robot.getPosition());
 			System.out.println("No mission specified");
@@ -111,7 +131,7 @@ public class Controller {
 	 * @param m 
 	 * @param r 
 	 */
-	public void addMissionToRobot(Mission m, Robot r) {
+	public void addMissionToRobot(Mission m, RobotAvatar r) {
 		r.setMission(m);
 	}
 
@@ -119,7 +139,7 @@ public class Controller {
 	 * 
 	 * @param r 
 	 */
-	public void removeMission(Robot r) {
+	public void removeMission(RobotAvatar r) {
 		r.setMission(null);
 	}
 
@@ -128,7 +148,7 @@ public class Controller {
 	 */
 	public void stopEverything() {
 		for(AbstractRobotSimulator r : robots) {
-			((Robot) r).setMission(null);
+			((RobotAvatar) r).setMission(null);
 		}
 	}
 };

@@ -4,6 +4,7 @@
 
 package g16_tda593;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,6 +23,11 @@ public class Mission {
 	 * 
 	 */
 	private int missionId;
+
+	public Mission(LinkedList<Point> missionPoints, int id) {
+		this.points = missionPoints;
+		this.missionId = id;
+	}
 
 	/**
 	 * 

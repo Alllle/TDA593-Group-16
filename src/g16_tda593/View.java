@@ -7,7 +7,7 @@ package g16_tda593;
 import java.util.Set;
 
 import g16_tda593.Controller;
-import g16_tda593.Robot;
+import g16_tda593.RobotAvatar;
 
 /************************************************************/
 /**
@@ -26,5 +26,5 @@ public interface View {
 	 * 
 	 * @param robots 
 	 */
-	public void updateRobots(Set<Robot> robots);
+	public void updateRobots(Set<RobotAvatar> robots);
 };

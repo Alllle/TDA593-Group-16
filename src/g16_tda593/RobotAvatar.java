@@ -14,9 +14,9 @@ import g16_tda593.Sensors;
 /**
  * 
  */
-public class Robot extends AbstractRobotSimulator {
+public class RobotAvatar extends AbstractRobotSimulator {
 	
-	public Robot(Point position, String name) {
+	public RobotAvatar(Point position, String name) {
 		super(position, name);
 		// TODO Auto-generated constructor stub
 		this.gps = new GPS();
