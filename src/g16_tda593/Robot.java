@@ -1,5 +1,6 @@
 package g16_tda593;
 import project.AbstractRobot;
+import project.RobotAgent;
 import project.Point;
 
 public class Robot extends AbstractRobot {
@@ -38,11 +39,21 @@ public class Robot extends AbstractRobot {
 			}
 		}
 	}*/
+	/*
+	public void executeMission() {
+		int counter = 0;
+		this.setDestination(mission.getPoints()[counter]);
+		while(!mission.isCompleted()) {
+			if(this.position == mission.getPoints()[counter]) {
+				mission.completeMission();
+				counter++;
+			}
+		}
+	}*/
 	
 	public void executeMission() {
 		this.setDestination(mission.getPoints()[0]);
 	}
-
 	
 	public void assignMission(Mission mission){
 		this.mission = mission;
