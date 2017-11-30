@@ -165,7 +165,10 @@
       <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_KYXnANUKEeefPZdaWwFbGA" name="updateRobots">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KYXnAdUKEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KYXnAdUKEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-NgkUNVkEeefPZdaWwFbGA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-eC6sNVkEeefPZdaWwFbGA" value="*"/>
+      </ownedParameter>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_SuWE0NSZEeefPZdaWwFbGA"/>
@@ -177,6 +180,18 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VK4DgdVbEeefPZdaWwFbGA" value="1"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-YRp4NVkEeefPZdaWwFbGA" name="updateRobots">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-ZiOINVkEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-Z1wINVkEeefPZdaWwFbGA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-aEZoNVkEeefPZdaWwFbGA" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-eZgANVkEeefPZdaWwFbGA" name="updateRobots">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-eauINVkEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-e-u0NVkEeefPZdaWwFbGA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-fMKMNVkEeefPZdaWwFbGA"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_qizYgNSZEeefPZdaWwFbGA" name="Speach">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zELjsNSZEeefPZdaWwFbGA" client="_qizYgNSZEeefPZdaWwFbGA" supplier="_PXNw8NSZEeefPZdaWwFbGA" contract="_PXNw8NSZEeefPZdaWwFbGA"/>
@@ -184,6 +199,18 @@
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_VLE30NVbEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VLFe4NVbEeefPZdaWwFbGA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VLFe4dVbEeefPZdaWwFbGA" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-awWINVkEeefPZdaWwFbGA" name="updateRobots">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-a2cwNVkEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-a3D0NVkEeefPZdaWwFbGA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-a3D0dVkEeefPZdaWwFbGA" value="1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-fdP8NVkEeefPZdaWwFbGA" name="updateRobots">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-flLwNVkEeefPZdaWwFbGA" name="robots" type="_v7LdUNSXEeefPZdaWwFbGA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-flLwdVkEeefPZdaWwFbGA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-flLwtVkEeefPZdaWwFbGA"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
