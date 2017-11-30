@@ -41,7 +41,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	/**
 	 * 
 	 */
-	private List<LocationController> locControllers;
+	private List<Gatekeeper> gatekeepers;
 	/**
 	 * 
 	 */
@@ -56,25 +56,42 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		views = new ArrayList<View>();
 		//missions = new ArrayList<Mission>();
 		this.robots = robots;
-		locControllers = new ArrayList<LocationController>();
+		gatekeepers = new ArrayList<Gatekeeper>();
 		environment = new Environment(e);
 		rs = new RewardSystem();
 		
 	}
+	
+	public double distance(RobotAvatar r, Gatekeeper gk) {
+		double distance = Math.hypot(r.getPosition().getX() - gk.getCenter().getX(),
+				r.getPosition().getZ() - gk.getCenter().getZ());
+		return distance;
+	}
 
 	@Override
 	public void update(RobotAvatar robot) {
-		if(!robot.getMission().getPoints().isEmpty()) {
-			if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
-				robot.getMission().getPoints().pop();
-				executeMission(robot);
-				System.out.println("ROBOT IS AT POSITION");
+		for(Gatekeeper k : gatekeepers) {
+			if(distance(robot, k) < k.getRadius()) {
+				if(k.tryAcquire(robot)) {
+					if(!robot.getMission().getPoints().isEmpty()) {
+						if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
+							robot.getMission().getPoints().pop();
+							executeMission(robot);
+							System.out.println("ROBOT IS AT POSITION");
+						}
+					}
+				}
+			} else if(distance(robot, k) > k.getRadius()) {
+				k.release(robot);
+			} else {
+				robot.setDestination(robot.getPosition());
 			}
+		
 		}
 	}
 	
-	public void addLocationController(LocationController lc) {
-		this.locControllers.add(lc);
+	public void addLocationController(Gatekeeper lc) {
+		this.gatekeepers.add(lc);
 	}
 	
 	public Set<RobotAvatar> getRobots() {

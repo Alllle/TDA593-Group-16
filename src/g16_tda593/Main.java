@@ -21,22 +21,26 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		
 		Set<RobotAvatar> robots = new HashSet<RobotAvatar>();
-		RobotAvatar robot1 = new RobotAvatar(new Point(6, -4), "Robot 1");
+		RobotAvatar robot1 = new RobotAvatar(new Point(7, -2), "Robot 1");
 		RobotAvatar robot2 = new RobotAvatar(new Point(6, -2), "Robot 2");
-		RobotAvatar robot3 = new RobotAvatar(new Point(6, 0), "Robot 3");
-		RobotAvatar robot4 = new RobotAvatar(new Point(6, 2), "Robot 4");
+		RobotAvatar robot3 = new RobotAvatar(new Point(6, 2), "Robot 3");
+		RobotAvatar robot4 = new RobotAvatar(new Point(7, 2), "Robot 4");
 		
 		Mission mission1 = new Mission(1);
 		mission1.addPoint(new Point(-3.5, -3.5));
+		mission1.addPoint(new Point(-7, -2));
 		
 		Mission mission2 = new Mission(2);
 		mission2.addPoint(new Point(3.5, -3.5));
+		mission2.addPoint(new Point(6, -2));
 		
 		Mission mission3 = new Mission(3);
 		mission3.addPoint(new Point(-3.5, 3.5));
+		mission3.addPoint(new Point(-7, 2));
 		
 		Mission mission4 = new Mission(4);
 		mission4.addPoint(new Point(3.5, 3.5));
+		mission4.addPoint(new Point(6, 2));
 		
 		robot1.setMission(mission1);
 		robot2.setMission(mission2);
@@ -123,6 +127,7 @@ public class Main {
 		controller.addMission(mission2);
 		controller.addMission(mission3);
 		controller.addMission(mission4);*/
+		controller.addLocationController(new Gatekeeper(new Point(-5, 3.5), 5, e));
 		
 		
 		controller.executeMission(robot1);
