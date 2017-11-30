@@ -18,6 +18,7 @@ public class Environment {
 	
 	public Environment(EnvironmentDescription e) {
 		this.e = e;
+		
 	}
 	/**
 	 * 
@@ -31,7 +32,10 @@ public class Environment {
 	public List<Area> getAreas() {
 		return areas;
 	}
-	public void addRoom(EnvironmentDescription e) {
-		this.e.add(e);
+	public void addPhysicalRoom(PhysicalArea area) {
+		this.areas.add(area);
+	}
+	public EnvironmentDescription getEnvironment() {
+		return e;
 	}
 };

@@ -4,6 +4,9 @@
 
 package g16_tda593;
 
+import java.awt.Color;
+
+import simbad.sim.AbstractWall;
 import simbad.sim.EnvironmentDescription;
 import simbad.sim.HorizontalWall;
 import simbad.sim.VerticalWall;
@@ -29,11 +32,12 @@ public class PhysicalArea extends Area {
 	 * @param c Width/height (i don't really get it either)
 	 * @param direction Specifies if the wall is horizontal (h) or vertical (v) if not specified it defaults to v.
 	 */
-	public void addWall(float a, float b, float c, char direction) {
+	public void addWall(float a, float b, float c, char direction, EnvironmentDescription e) {
+		Color color = Color.BLACK;
 		if(direction == 'h') {
-			super.getEnvironment().add(new HorizontalWall(a,b,c,super.getEnvironment(), null));
+			AbstractWall wall = new HorizontalWall(a,b,c,e, color);
 		}else {
-			super.getEnvironment().add(new VerticalWall(a,b,c,super.getEnvironment(), null));
+			super.getEnvironment().add(new VerticalWall(a,b,c,e, color));
 		}
 	}
 
