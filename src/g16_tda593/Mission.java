@@ -4,6 +4,7 @@
 
 package g16_tda593;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import project.Point;
@@ -16,7 +17,7 @@ public class Mission {
 	/**
 	 * 
 	 */
-	private List<Point> points;
+	private LinkedList<Point> points;
 	/**
 	 * 
 	 */

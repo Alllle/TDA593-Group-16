@@ -19,7 +19,10 @@ public class Robot extends AbstractRobotSimulator {
 	public Robot(Point position, String name) {
 		super(position, name);
 		// TODO Auto-generated constructor stub
+		this.gps = new GPS();
 	}
+	
+	private GPS gps;
 
 	/**
 	 * 
@@ -33,10 +36,6 @@ public class Robot extends AbstractRobotSimulator {
 	 * 
 	 */
 	private String robotId;
-	/**
-	 * 
-	 */
-	private int missionPosition;
 
 	/**
 	 * 
@@ -53,6 +52,10 @@ public class Robot extends AbstractRobotSimulator {
 	public List<Sensors> getSensors() {
 		return this.sensors;
 	}
+	
+	public GPS getGPS() {
+		return this.gps;
+	}
 
 	/**
 	 * 
@@ -66,7 +69,11 @@ public class Robot extends AbstractRobotSimulator {
 	 * 
 	 * @return 
 	 */
-	public int getMissionPosition() {
-		return this.missionPosition;
+	public Point getMissionPosition() {
+		return this.gps.getValue();
+	}
+	
+	public void setMission(Mission m) {
+		this.mission = m;
 	}
 };

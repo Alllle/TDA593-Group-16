@@ -4,12 +4,15 @@
 
 package g16_tda593;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
 import project.AbstractRobotSimulator;
 import project.LocationController;
-
+import project.Point;
 import g16_tda593.Environment;
 import g16_tda593.Mission;
 import g16_tda593.RewardSystem;
@@ -45,28 +48,48 @@ public class Controller {
 	 * 
 	 */
 	private RewardSystem rs;
-	/**
-	 * 
-	 */
-	public Mission[] mission;
-	/**
-	 * 
-	 */
-	public RewardSystem rewardsystem;
-	/**
-	 * 
-	 */
-	public Environment environment;
-	/**
-	 * 
-	 */
-	public Robot[] robot;
+	
+	public Controller() {
+		views = new ArrayList<View>();
+		missions = new LinkedList<Mission>();
+		robots = new HashSet<AbstractRobotSimulator>();
+		locControllers = new ArrayList<LocationController>();
+		e = new Environment();
+		rs = new RewardSystem();
+		
+	}
+	
+	public void addLocationController(LocationController lc) {
+		this.locControllers.add(lc);
+	}
+	
+	public HashSet<AbstractRobotSimulator> getRobots() {
+		return (HashSet<AbstractRobotSimulator>) this.robots;
+	}
+	
+	public void addMission(Mission m) {
+		this.missions.add(m);
+	}
 
 	/**
 	 * 
 	 * @param robot 
 	 */
 	public void executeMission(Robot robot) {
+		if(robot.getMission() == null) {
+			robot.setDestination(robot.getPosition());
+			System.out.println("No mission specified");
+			return;
+		}
+		
+		LinkedList<Point> missionPoints = (LinkedList<Point>) robot.getMission().getPoints();
+		while(!missionPoints.isEmpty()) {
+			Point currentPoint = (Point) missionPoints.peek();
+			robot.setDestination(currentPoint);
+			if(robot.getPosition() == currentPoint) {
+				missionPoints.pop();
+			}
+		}
 	}
 
 	/**
@@ -88,7 +111,8 @@ public class Controller {
 	 * @param m 
 	 * @param r 
 	 */
-	public void addMission(Mission m, Robot r) {
+	public void addMissionToRobot(Mission m, Robot r) {
+		r.setMission(m);
 	}
 
 	/**
@@ -96,11 +120,15 @@ public class Controller {
 	 * @param r 
 	 */
 	public void removeMission(Robot r) {
+		r.setMission(null);
 	}
 
 	/**
 	 * 
 	 */
 	public void stopEverything() {
+		for(AbstractRobotSimulator r : robots) {
+			((Robot) r).setMission(null);
+		}
 	}
 };
