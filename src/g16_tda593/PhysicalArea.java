@@ -13,6 +13,7 @@ import simbad.sim.VerticalWall;
  * 
  */
 public class PhysicalArea extends Area {
+	
 	public PhysicalArea(Span span) {
 		super(span);
 	}

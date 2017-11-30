@@ -4,37 +4,20 @@
 
 package g16_tda593;
 
-import java.util.List;
-
+import g16_tda593.Sensors;
 import project.Point;
 
 /************************************************************/
 /**
  * 
  */
-public class Mission {
+public class GPS implements Sensors {
 	/**
 	 * 
 	 */
-	private List<Point> points;
-	/**
-	 * 
-	 */
-	private int missionId;
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public List<Point> getPoints() {
-		return this.points;
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public int getId() {
-		return this.missionId;
+	private Point value;
+	
+	public Point getValue() {
+		return this.value;
 	}
 };

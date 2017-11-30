@@ -4,37 +4,16 @@
 
 package g16_tda593;
 
-import java.util.List;
-
 import project.Point;
 
 /************************************************************/
 /**
  * 
  */
-public class Mission {
-	/**
-	 * 
-	 */
-	private List<Point> points;
-	/**
-	 * 
-	 */
-	private int missionId;
-
+public interface Sensors {
 	/**
 	 * 
 	 * @return 
 	 */
-	public List<Point> getPoints() {
-		return this.points;
-	}
-
-	/**
-	 * 
-	 * @return 
-	 */
-	public int getId() {
-		return this.missionId;
-	}
+	public Point getValue();
 };

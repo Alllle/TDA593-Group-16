@@ -46,7 +46,7 @@ public class Main {
 	Set<Robot> robots = new HashSet<>();
 	List<Mission> missions = new ArrayList<>();
 	/*Felix added missions here, not 100% about locations, will try*/
-	missions.add(new Mission(new Point[] {new Point(-3.5, -3.5)}, 1));
+	/*missions.add(new Mission(new Point[] {new Point(-3.5, -3.5)}, 1));
 	missions.add(new Mission(new Point[] {new Point(3.5, -3.5)}, 2));
 	missions.add(new Mission(new Point[] {new Point(-3.5, 3.5)}, 3));
 	missions.add(new Mission(new Point[] {new Point(3.5, 3.5)}, 4));
@@ -58,7 +58,7 @@ public class Main {
 	/*Robot robot1 = new Robot(new Point(6, -4), "Robot 1", new Mission(new Point[] {new Point(-3.5, -3.5)}, 1));
 	Robot robot4 = new Robot(new Point(6, 2), "Robot 2", new Mission(new Point[] {new Point(3.5, 3.5)}, 2));*/
 
-	robots.add(robot1);
+	/*robots.add(robot1);
 	robots.add(robot2);
 	robots.add(robot3);
 	robots.add(robot4);
@@ -72,11 +72,11 @@ public class Main {
 	
 	//robot1.executeMission();
 	//robot4.executeMission();
-	robot1.assignMission(missions.get(0));
+	/*robot1.assignMission(missions.get(0));
 	robot4.assignMission(missions.get(2));
 	robot3.assignMission(missions.get(3));
 	robot2.assignMission(missions.get(1));
-	
+	*/
 	
 	}
 }
