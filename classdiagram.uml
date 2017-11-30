@@ -114,13 +114,9 @@
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="__kt-ANSXEeefPZdaWwFbGA" name="Environment">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_nwO9cNVNEeefPZdaWwFbGA" name="areas" visibility="private" type="_NNxNoNSYEeefPZdaWwFbGA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_o3an8NVNEeefPZdaWwFbGA"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_o3rtsNVNEeefPZdaWwFbGA" value="*"/>
-    </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="__kZRYdWpEeeOOKRey_4Vag" name="area" type="_NNxNoNSYEeefPZdaWwFbGA" association="__kU_8NWpEeeOOKRey_4Vag">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__kafgNWpEeeOOKRey_4Vag"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__kafgdWpEeeOOKRey_4Vag" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__kafgdWpEeeOOKRey_4Vag" value="*"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_uXlaANVPEeefPZdaWwFbGA" name="getAreas">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_uXlaAdVPEeefPZdaWwFbGA" name="a" type="_NNxNoNSYEeefPZdaWwFbGA" direction="return">
@@ -128,6 +124,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TmGCkNVREeefPZdaWwFbGA" value="*"/>
       </ownedParameter>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rOHNYNWsEeeOOKRey_4Vag" name="addRoom"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_NNxNoNSYEeefPZdaWwFbGA" name="Area">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_LBcoUNVOEeefPZdaWwFbGA" name="span" visibility="private" type="_wMZ4gNVNEeefPZdaWwFbGA"/>
@@ -306,7 +303,7 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_wEhqEtWpEeeOOKRey_4Vag" name="controller" type="_uRxPgNSXEeefPZdaWwFbGA" association="_wEf04NWpEeeOOKRey_4Vag"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="__kU_8NWpEeeOOKRey_4Vag" memberEnd="__kZRYdWpEeeOOKRey_4Vag __kbGkNWpEeeOOKRey_4Vag">
+  <packagedElement xmi:type="uml:Association" xmi:id="__kU_8NWpEeeOOKRey_4Vag" visibility="private" memberEnd="__kZRYdWpEeeOOKRey_4Vag __kbGkNWpEeeOOKRey_4Vag">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__kYqUNWpEeeOOKRey_4Vag" source="org.eclipse.papyrus">
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__kZRYNWpEeeOOKRey_4Vag" key="nature" value="UML_Nature"/>
     </eAnnotations>

@@ -202,9 +202,9 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="__kwaQtSXEeefPZdaWwFbGA" y="15"/>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="__kxBUNSXEeefPZdaWwFbGA" type="Class_AttributeCompartment">
-      <children xmi:type="notation:Shape" xmi:id="_cArUINVPEeefPZdaWwFbGA" type="Property_ClassAttributeLabel">
-        <element xmi:type="uml:Property" href="classdiagram.uml#_nwO9cNVNEeefPZdaWwFbGA"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_cArUIdVPEeefPZdaWwFbGA"/>
+      <children xmi:type="notation:Shape" xmi:id="_tNK7ENWsEeeOOKRey_4Vag" type="Property_ClassAttributeLabel">
+        <element xmi:type="uml:Property" href="classdiagram.uml#__kZRYdWpEeeOOKRey_4Vag"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tNK7EdWsEeeOOKRey_4Vag"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="__kxBUdSXEeefPZdaWwFbGA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="__kxBUtSXEeefPZdaWwFbGA"/>
@@ -215,6 +215,10 @@
       <children xmi:type="notation:Shape" xmi:id="_dvctoNVQEeefPZdaWwFbGA" type="Operation_ClassOperationLabel">
         <element xmi:type="uml:Operation" href="classdiagram.uml#_uXlaANVPEeefPZdaWwFbGA"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_dvctodVQEeefPZdaWwFbGA"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_tNMJMNWsEeeOOKRey_4Vag" type="Operation_ClassOperationLabel">
+        <element xmi:type="uml:Operation" href="classdiagram.uml#_rOHNYNWsEeeOOKRey_4Vag"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_tNMJMdWsEeeOOKRey_4Vag"/>
       </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="__kxBVtSXEeefPZdaWwFbGA"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="__kxBV9SXEeefPZdaWwFbGA"/>
