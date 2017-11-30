@@ -127,7 +127,6 @@
     <ownedOperation xmi:type="uml:Operation" xmi:id="_rOHNYNWsEeeOOKRey_4Vag" name="addRoom"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_NNxNoNSYEeefPZdaWwFbGA" name="Area">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_LBcoUNVOEeefPZdaWwFbGA" name="span" visibility="private" type="_wMZ4gNVNEeefPZdaWwFbGA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_b8YfcNVOEeefPZdaWwFbGA" name="environmentDescription" visibility="private"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_RsrsctWqEeeOOKRey_4Vag" name="span" type="_wMZ4gNVNEeefPZdaWwFbGA" association="_RsrFYNWqEeeOOKRey_4Vag">
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RssTgNWqEeeOOKRey_4Vag"/>
@@ -157,7 +156,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_SfuPcNSYEeefPZdaWwFbGA" name="PhysicalArea">
     <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_i6hN8NSYEeefPZdaWwFbGA" client="_SfuPcNSYEeefPZdaWwFbGA" supplier="_NNxNoNSYEeefPZdaWwFbGA" contract="_NNxNoNSYEeefPZdaWwFbGA"/>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZfjbMNVPEeefPZdaWwFbGA" name="addWall">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZfjbMNVPEeefPZdaWwFbGA" name="addWall" concurrency="concurrent">
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZfjbMdVPEeefPZdaWwFbGA" name="a">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
       </ownedParameter>
@@ -166,6 +165,9 @@
       </ownedParameter>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZfjbM9VPEeefPZdaWwFbGA" name="c">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_EhnnENWvEeeOOKRey_4Vag" name="direction">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_5lVhgBydEduyofBvg4RL2w"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_1EbvENWoEeeOOKRey_4Vag" name="getEnvironment">
@@ -239,16 +241,16 @@
   <packagedElement xmi:type="uml:Realization" xmi:id="_0qYQANSaEeefPZdaWwFbGA" client="_v7LdUNSXEeefPZdaWwFbGA" supplier="_0pZ_oNSaEeefPZdaWwFbGA"/>
   <packagedElement xmi:type="uml:Class" xmi:id="_wMZ4gNVNEeefPZdaWwFbGA" name="Span">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_33WK8NVNEeefPZdaWwFbGA" name="x" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_7Qep8NVNEeefPZdaWwFbGA" name="y" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="__ZNZ4NVNEeefPZdaWwFbGA" name="z" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_CL1SgNVOEeefPZdaWwFbGA" name="w" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="__gA6kNVPEeefPZdaWwFbGA" name="Sensors">

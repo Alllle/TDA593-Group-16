@@ -16,6 +16,10 @@ public abstract class Area {
 		this.span = span;
 	}
 	
+	public Area(float f, float g, float h, float i) {
+		this.span = new Span(f,g,h,i);
+	}
+
 	/**
 	 * 
 	 */

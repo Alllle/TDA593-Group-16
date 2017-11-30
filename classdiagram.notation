@@ -240,10 +240,6 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_NNzp4tSYEeefPZdaWwFbGA" y="15"/>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_NNzp49SYEeefPZdaWwFbGA" type="Interface_AttributeCompartment">
-      <children xmi:type="notation:Shape" xmi:id="_cAr7MNVPEeefPZdaWwFbGA" type="Property_InterfaceAttributeLabel">
-        <element xmi:type="uml:Property" href="classdiagram.uml#_LBcoUNVOEeefPZdaWwFbGA"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_cAr7MdVPEeefPZdaWwFbGA"/>
-      </children>
       <children xmi:type="notation:Shape" xmi:id="_cAr7MtVPEeefPZdaWwFbGA" type="Property_InterfaceAttributeLabel">
         <element xmi:type="uml:Property" href="classdiagram.uml#_b8YfcNVOEeefPZdaWwFbGA"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_cAr7M9VPEeefPZdaWwFbGA"/>

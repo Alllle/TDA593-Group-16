@@ -58,7 +58,7 @@ public class Main {
 	
 	EnvironmentFactory en = new EnvironmentFactory();
 	Area area = en.makeEnvironment("assignment3");
-
+	
 	SimulatorController controller = new Controller(robots, area.getArea());
 	
 	/*robot1.setDestination(new Point(-3.5, -3.5));

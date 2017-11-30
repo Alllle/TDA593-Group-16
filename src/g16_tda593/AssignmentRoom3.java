@@ -60,7 +60,7 @@ public class AssignmentRoom3 {
 		VerticalWall w18 = new VerticalWall(0f, 1.25f, -1.25f, e);
 		e.add(w18);
 		
-		return new PhysArea(e);
+		
 		
 		
 	}

@@ -1,5 +1,4 @@
 package g16_tda593;
-
 import java.util.Set;
 
 import project.AbstractRobot;
