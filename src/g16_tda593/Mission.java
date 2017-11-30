@@ -24,8 +24,8 @@ public class Mission {
 	 */
 	private int missionId;
 
-	public Mission(LinkedList<Point> missionPoints, int id) {
-		this.points = missionPoints;
+	public Mission(int id) {
+		this.points = new LinkedList<Point>();
 		this.missionId = id;
 	}
 
@@ -33,8 +33,12 @@ public class Mission {
 	 * 
 	 * @return 
 	 */
-	public List<Point> getPoints() {
+	public LinkedList<Point> getPoints() {
 		return this.points;
+	}
+	
+	public void addPoint(Point p) {
+		this.points.add(p);
 	}
 
 	/**

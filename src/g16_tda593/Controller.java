@@ -33,7 +33,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	/**
 	 * 
 	 */
-	private List<Mission> missions;
+	//private List<Mission> missions;
 	/**
 	 * 
 	 */
@@ -51,20 +51,26 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	 */
 	private RewardSystem rs;
 	
-	public Controller( Set<RobotAvatar> robots, EnvironmentDescription e) {
+	public Controller(Set<RobotAvatar> robots, EnvironmentDescription e) {
 		super(robots, e);
 		views = new ArrayList<View>();
-		missions = new LinkedList<Mission>();
+		//missions = new ArrayList<Mission>();
 		this.robots = robots;
 		locControllers = new ArrayList<LocationController>();
 		environment = new Environment(e);
 		rs = new RewardSystem();
+		
 	}
 
 	@Override
 	public void update(RobotAvatar robot) {
-		
-
+		if(!robot.getMission().getPoints().isEmpty()) {
+			if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
+				robot.getMission().getPoints().pop();
+				executeMission(robot);
+				System.out.println("ROBOT IS AT POSITION");
+			}
+		}
 	}
 	
 	public void addLocationController(LocationController lc) {
@@ -84,31 +90,30 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	}
 	
 	public void addMission(Mission m) {
-		this.missions.add(m);
+		System.out.println("ADding mission: " + m.getId());
+		//this.missions.add(m);
 	}
 	
-	public ArrayList<Mission> getMissions() {
-		return (ArrayList<Mission>) this.missions;
-	}
+	//public ArrayList<Mission> getMissions() {
+		//return (ArrayList<Mission>) this.missions;
+//	}
 
 	/**
 	 * 
 	 * @param robot 
 	 */
 	public void executeMission(RobotAvatar robot) {
-		if(robot.getMission() == null) {
+		if(robot == null) {
+			System.out.println("Robot is null");
+			return;
+		} else if(robot.getMission() == null || robot.getMission().getPoints().isEmpty()) {
 			robot.setDestination(robot.getPosition());
 			System.out.println("No mission specified");
 			return;
-		}
-		
-		LinkedList<Point> missionPoints = (LinkedList<Point>) robot.getMission().getPoints();
-		while(!missionPoints.isEmpty()) {
-			Point currentPoint = (Point) missionPoints.peek();
+		} else {
+			System.out.println("mission: " + robot.getMission().getId() + " executed by robot: " + robot.getId());
+			Point currentPoint = (Point) robot.getMission().getPoints().peek();
 			robot.setDestination(currentPoint);
-			if(robot.getPosition() == currentPoint) {
-				missionPoints.pop();
-			}
 		}
 	}
 

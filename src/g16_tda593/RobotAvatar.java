@@ -20,6 +20,7 @@ public class RobotAvatar extends AbstractRobotSimulator {
 		super(position, name);
 		// TODO Auto-generated constructor stub
 		this.gps = new GPS();
+		robotId = name;
 	}
 	
 	private GPS gps;
@@ -74,6 +75,7 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	}
 	
 	public void setMission(Mission m) {
+		System.out.println("Mission added to robot: " + robotId);
 		this.mission = m;
 	}
 };
