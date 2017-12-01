@@ -127,7 +127,8 @@ public class Main {
 		controller.addMission(mission2);
 		controller.addMission(mission3);
 		controller.addMission(mission4);*/
-		controller.addLocationController(new Gatekeeper(new Point(-5, 3.5), 5, e));
+		controller.addLocationController(new Gatekeeper(new Point(3, 3.5), 3, e));
+		controller.addLocationController(new Gatekeeper(new Point(3, -3.5), 3, e));
 		
 		
 		controller.executeMission(robot1);

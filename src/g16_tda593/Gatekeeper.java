@@ -6,6 +6,7 @@ import simbad.sim.EnvironmentDescription;
 
 public class Gatekeeper extends LocationController {
 	
+	private RobotAvatar currentOwner;
 	private Point position;
 	private double radius;
 
@@ -24,4 +25,11 @@ public class Gatekeeper extends LocationController {
 		return this.radius;
 	}
 	
+	public RobotAvatar getOwner() {
+		return currentOwner;
+	}
+	
+	public void setOwner(RobotAvatar r) {
+		currentOwner = r;
+	}
 }

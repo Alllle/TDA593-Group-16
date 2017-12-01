@@ -70,23 +70,32 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 
 	@Override
 	public void update(RobotAvatar robot) {
+		if(!robot.getMission().getPoints().isEmpty()) {
+			if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
+				robot.getMission().getPoints().pop();
+				executeMission(robot);
+			} else {
+				executeMission(robot);
+			}
+		}
+		
 		for(Gatekeeper k : gatekeepers) {
 			if(distance(robot, k) < k.getRadius()) {
-				if(k.tryAcquire(robot)) {
-					if(!robot.getMission().getPoints().isEmpty()) {
-						if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
-							robot.getMission().getPoints().pop();
-							executeMission(robot);
-							System.out.println("ROBOT IS AT POSITION");
-						}
-					}
+				if(!k.tryAcquire(robot) && k.getOwner().getId() != robot.getId()){
+					robot.setDestination(robot.getPosition());
+					//System.out.println("Robot " + robot.getId() + " is stuck");
+				} else if(k.getOwner() == null) {
+					k.setOwner(robot);
+				} else if(k.getOwner().getId() != robot.getId()) {
+					k.setOwner(robot);
 				}
-			} else if(distance(robot, k) > k.getRadius()) {
-				k.release(robot);
-			} else {
-				robot.setDestination(robot.getPosition());
+				
+			} else if(k.getOwner() != null && robot.getId() == k.getOwner().getId()) {
+				if(distance(robot, k) > k.getRadius()) {
+					k.release(robot);
+					k.setOwner(null);
+				}
 			}
-		
 		}
 	}
 	
@@ -125,10 +134,8 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 			return;
 		} else if(robot.getMission() == null || robot.getMission().getPoints().isEmpty()) {
 			robot.setDestination(robot.getPosition());
-			System.out.println("No mission specified");
 			return;
 		} else {
-			System.out.println("mission: " + robot.getMission().getId() + " executed by robot: " + robot.getId());
 			Point currentPoint = (Point) robot.getMission().getPoints().peek();
 			robot.setDestination(currentPoint);
 		}
