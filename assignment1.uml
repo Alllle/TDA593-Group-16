@@ -94,4 +94,57 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_FthIgcVTEeeFcoTMwq18VA" name="remove mission" type="_6OijwMVSEeeFcoTMwq18VA" association="_Ftf6YMVTEeeFcoTMwq18VA"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_FthIgsVTEeeFcoTMwq18VA" type="_VJS-MMVMEeeFcoTMwq18VA" association="_Ftf6YMVTEeeFcoTMwq18VA"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_zrEx0NXcEeeUvvdDo83lWg" name="ROVU">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_8oG-QNXcEeeUvvdDo83lWg" name="AddMission"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_AWTuUNXdEeeUvvdDo83lWg" name="AssignMission"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_C-TrUNXdEeeUvvdDo83lWg" name="stopEverything"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_FQfJUNXdEeeUvvdDo83lWg" name="calculateReward"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_JgzH8NXdEeeUvvdDo83lWg" name="removeMission"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_MghocNXdEeeUvvdDo83lWg" name="executeMission"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_2B2b8NXcEeeUvvdDo83lWg" name="Controller"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_3IbpgNXcEeeUvvdDo83lWg" name="Robot"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_4_rfANXcEeeUvvdDo83lWg" name="Operator"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_P7M_kNXdEeeUvvdDo83lWg" memberEnd="_P7kL8NXdEeeUvvdDo83lWg _P7q5oNXdEeeUvvdDo83lWg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_P7aa8NXdEeeUvvdDo83lWg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_P7deQNXdEeeUvvdDo83lWg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_P7kL8NXdEeeUvvdDo83lWg" name="addmission" type="_8oG-QNXcEeeUvvdDo83lWg" association="_P7M_kNXdEeeUvvdDo83lWg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_P7q5oNXdEeeUvvdDo83lWg" name="operator" type="_4_rfANXcEeeUvvdDo83lWg" association="_P7M_kNXdEeeUvvdDo83lWg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_RxNe8NXdEeeUvvdDo83lWg" memberEnd="_RxQiQdXdEeeUvvdDo83lWg _RxRJUNXdEeeUvvdDo83lWg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_RxP7MNXdEeeUvvdDo83lWg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_RxQiQNXdEeeUvvdDo83lWg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RxQiQdXdEeeUvvdDo83lWg" name="stopeverything" type="_C-TrUNXdEeeUvvdDo83lWg" association="_RxNe8NXdEeeUvvdDo83lWg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_RxRJUNXdEeeUvvdDo83lWg" name="operator" type="_4_rfANXcEeeUvvdDo83lWg" association="_RxNe8NXdEeeUvvdDo83lWg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Slv6QNXdEeeUvvdDo83lWg" memberEnd="_Sly9kNXdEeeUvvdDo83lWg _Sly9kdXdEeeUvvdDo83lWg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SlyWgNXdEeeUvvdDo83lWg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SlyWgdXdEeeUvvdDo83lWg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Sly9kNXdEeeUvvdDo83lWg" name="removemission" type="_JgzH8NXdEeeUvvdDo83lWg" association="_Slv6QNXdEeeUvvdDo83lWg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Sly9kdXdEeeUvvdDo83lWg" type="_4_rfANXcEeeUvvdDo83lWg" association="_Slv6QNXdEeeUvvdDo83lWg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_XWH5ANXdEeeUvvdDo83lWg" memberEnd="_XWLjYNXdEeeUvvdDo83lWg _XWLjYdXdEeeUvvdDo83lWg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XWK8UNXdEeeUvvdDo83lWg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XWK8UdXdEeeUvvdDo83lWg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XWLjYNXdEeeUvvdDo83lWg" name="assignmission" type="_AWTuUNXdEeeUvvdDo83lWg" association="_XWH5ANXdEeeUvvdDo83lWg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_XWLjYdXdEeeUvvdDo83lWg" name="controller" type="_2B2b8NXcEeeUvvdDo83lWg" association="_XWH5ANXdEeeUvvdDo83lWg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_YvzBsNXdEeeUvvdDo83lWg" memberEnd="_Yv1d8dXdEeeUvvdDo83lWg _Yv2FANXdEeeUvvdDo83lWg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Yv024NXdEeeUvvdDo83lWg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Yv1d8NXdEeeUvvdDo83lWg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Yv1d8dXdEeeUvvdDo83lWg" name="calculatereward" type="_FQfJUNXdEeeUvvdDo83lWg" association="_YvzBsNXdEeeUvvdDo83lWg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Yv2FANXdEeeUvvdDo83lWg" type="_2B2b8NXcEeeUvvdDo83lWg" association="_YvzBsNXdEeeUvvdDo83lWg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_aJ5oMNXdEeeUvvdDo83lWg" memberEnd="_aJ62UtXdEeeUvvdDo83lWg _aJ7dYNXdEeeUvvdDo83lWg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_aJ62UNXdEeeUvvdDo83lWg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_aJ62UdXdEeeUvvdDo83lWg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_aJ62UtXdEeeUvvdDo83lWg" name="executemission" type="_MghocNXdEeeUvvdDo83lWg" association="_aJ5oMNXdEeeUvvdDo83lWg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_aJ7dYNXdEeeUvvdDo83lWg" name="robot" type="_3IbpgNXcEeeUvvdDo83lWg" association="_aJ5oMNXdEeeUvvdDo83lWg"/>
+  </packagedElement>
 </uml:Model>

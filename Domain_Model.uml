@@ -30,4 +30,28 @@
   <packagedElement xmi:type="uml:Association" xmi:id="_d89vEMVTEee6xdiJbe190A"/>
   <packagedElement xmi:type="uml:Association" xmi:id="_3JBu4MVTEee6xdiJbe190A"/>
   <packagedElement xmi:type="uml:Dependency" xmi:id="_K2HkkMVUEee6xdiJbe190A" client="_rKcBgMVJEeeEa-pzwypVfQ" supplier="_Yq5kEMVJEeeEa-pzwypVfQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_T3rNQNW-EeeUvvdDo83lWg" name="Controller"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lErEwNW-EeeUvvdDo83lWg" name="Operator"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nRPC8NW-EeeUvvdDo83lWg" name="View"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tewVINW-EeeUvvdDo83lWg" name="GUI"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_5fSu0NW-EeeUvvdDo83lWg" name="RewardSystem"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-V6fgNW-EeeUvvdDo83lWg" name="Robot"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MsXnsNW_EeeUvvdDo83lWg" name="Mission"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QW8cANW_EeeUvvdDo83lWg" name="Environment"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_SxsnMNW_EeeUvvdDo83lWg" name="Area"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_U8PzMNW_EeeUvvdDo83lWg" name="PhysArea"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XTnTMNW_EeeUvvdDo83lWg" name="LogArea"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_dUJSQNW_EeeUvvdDo83lWg" client="_tewVINW-EeeUvvdDo83lWg" supplier="_nRPC8NW-EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qxck4NW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wVjtsNW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_zc1nsNW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0459ENW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_2J6R8NW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3vVXoNW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5J-JoNW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="__LnjANW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_DNbLkNXAEeeUvvdDo83lWg" client="_U8PzMNW_EeeUvvdDo83lWg" supplier="_SxsnMNW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Realization" xmi:id="_GCq6YNXAEeeUvvdDo83lWg" client="_XTnTMNW_EeeUvvdDo83lWg" supplier="_SxsnMNW_EeeUvvdDo83lWg"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_L4-mcNXAEeeUvvdDo83lWg" name="Strategy"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_PKHAANXAEeeUvvdDo83lWg"/>
 </uml:Model>
