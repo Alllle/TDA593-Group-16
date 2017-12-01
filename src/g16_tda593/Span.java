@@ -1,7 +1,7 @@
 package g16_tda593;
 /*
- * Span is a datatype found in area that specifies where the area is.
- * This is to detect wether or not a robot is inside this area.
+ * Span is a data type found in area that specifies where the area is.
+ * This is to detect whether or not a robot is inside this area.
  * It creates a rectangle starting with x,y pos
  * with width z and height w.
  */
