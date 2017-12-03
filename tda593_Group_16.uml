@@ -40,16 +40,14 @@
   <packagedElement xmi:type="uml:Package" xmi:id="_ppEikM6jEeeexou2H9X39g" name="tda593">
     <packagedElement xmi:type="uml:Class" xmi:id="_YDW9sM1yEee4oNKddcTgcw" name="LogArea"/>
     <packagedElement xmi:type="uml:Class" xmi:id="_5POiIM1xEee4oNKddcTgcw" name="RobotAvatar" visibility="public">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_BsSC4NbGEeeYNf-cNOerxA" name="gpa" visibility="private" type="_ezRSENbEEeeYNf-cNOerxA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_MepZQNbGEeeYNf-cNOerxA" name="mission" visibility="private" type="_LTGXQM1yEee4oNKddcTgcw"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_PEh2YNbGEeeYNf-cNOerxA" name="robotId" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_2ecxItbIEeeYNf-cNOerxA" name="mission" type="_LTGXQM1yEee4oNKddcTgcw" association="_2ecKENbIEeeYNf-cNOerxA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2ecxItbIEeeYNf-cNOerxA" name="mission" visibility="private" type="_LTGXQM1yEee4oNKddcTgcw" association="_2ecKENbIEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2edYMNbIEeeYNf-cNOerxA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2edYMdbIEeeYNf-cNOerxA" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_BQFHstbJEeeYNf-cNOerxA" name="gps" type="_ezRSENbEEeeYNf-cNOerxA" association="_BQCrcNbJEeeYNf-cNOerxA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_BQFHstbJEeeYNf-cNOerxA" name="gps" visibility="private" type="_ezRSENbEEeeYNf-cNOerxA" association="_BQCrcNbJEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BQGV0NbJEeeYNf-cNOerxA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BQGV0dbJEeeYNf-cNOerxA" value="1"/>
       </ownedAttribute>
@@ -121,22 +119,23 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Rtd9MM1zEee4oNKddcTgcw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Rtd9Mc1zEee4oNKddcTgcw" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_ECwR8M15Eee4oNKddcTgcw" name="environment" visibility="private" type="_QIFJMM1yEee4oNKddcTgcw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_dfc1YNamEeeYNf-cNOerxA" name="views" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dfc1YNamEeeYNf-cNOerxA" name="views" visibility="private" type="_9F0_sNbGEeeYNf-cNOerxA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wN3aMNhEEeedBZca6xz8Nw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wN9g0NhEEeedBZca6xz8Nw" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="__jaNgNanEeeYNf-cNOerxA" name="gatekeepers" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__jaNgNanEeeYNf-cNOerxA" name="gatekeepers" visibility="private" type="_hpGsMNbDEeeYNf-cNOerxA" subsettedProperty="_wqVvINdlEeedBZca6xz8Nw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ydHgANhEEeedBZca6xz8Nw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ydONsNhEEeedBZca6xz8Nw" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_dfeLEtbIEeeYNf-cNOerxA" name="environment" type="_QIFJMM1yEee4oNKddcTgcw" association="_dfdkANbIEeeYNf-cNOerxA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dfeLEtbIEeeYNf-cNOerxA" name="environment" visibility="private" type="_QIFJMM1yEee4oNKddcTgcw" association="_dfdkANbIEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dfeLE9bIEeeYNf-cNOerxA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dfeyINbIEeeYNf-cNOerxA" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_v3ENctbIEeeYNf-cNOerxA" name="robotavatar" type="_5POiIM1xEee4oNKddcTgcw" association="_v3DmYNbIEeeYNf-cNOerxA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_v3ENctbIEeeYNf-cNOerxA" name="robotavatar" visibility="private" type="_5POiIM1xEee4oNKddcTgcw" association="_v3DmYNbIEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v3E0gNbIEeeYNf-cNOerxA"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v3E0gdbIEeeYNf-cNOerxA" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ex5ootbJEeeYNf-cNOerxA" name="view" type="_9F0_sNbGEeeYNf-cNOerxA" association="_Ex4agNbJEeeYNf-cNOerxA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ex5ootbJEeeYNf-cNOerxA" name="view" visibility="private" type="_9F0_sNbGEeeYNf-cNOerxA" association="_Ex4agNbJEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ex62wNbJEeeYNf-cNOerxA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ex7d0NbJEeeYNf-cNOerxA" value="1"/>
       </ownedAttribute>
@@ -210,13 +209,13 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_QIFJMM1yEee4oNKddcTgcw" name="Environment">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_JkZVkc15Eee4oNKddcTgcw" name="areas" association="_JkYHcM15Eee4oNKddcTgcw">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JkZVkc15Eee4oNKddcTgcw" name="areas" visibility="private" association="_JkYHcM15Eee4oNKddcTgcw">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JkZVks15Eee4oNKddcTgcw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JkZ8oM15Eee4oNKddcTgcw" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_e_qAsNaiEeeYNf-cNOerxA" name="e" visibility="private" type="_eT8cINagEeeYNf-cNOerxA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Yk9Y4tbIEeeYNf-cNOerxA" name="area" type="_d1sL4M12Eee4oNKddcTgcw" association="_Yk8x0NbIEeeYNf-cNOerxA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Yk9Y4tbIEeeYNf-cNOerxA" name="area" visibility="private" type="_d1sL4M12Eee4oNKddcTgcw" association="_Yk8x0NbIEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yk9_8NbIEeeYNf-cNOerxA"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yk9_8dbIEeeYNf-cNOerxA" value="*"/>
       </ownedAttribute>
@@ -234,8 +233,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_d1sL4M12Eee4oNKddcTgcw" name="Area" visibility="public" isAbstract="true">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_fC_TcNagEeeYNf-cNOerxA" name="e" visibility="private" type="_eT8cINagEeeYNf-cNOerxA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_d6yf0NahEeeYNf-cNOerxA" name="span" visibility="private" type="_cfFW0NahEeeYNf-cNOerxA"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_gsUhktbIEeeYNf-cNOerxA" name="span" type="_to5-sNbGEeeYNf-cNOerxA" association="_gsT6gNbIEeeYNf-cNOerxA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gsUhktbIEeeYNf-cNOerxA" name="span" visibility="private" type="_to5-sNbGEeeYNf-cNOerxA" association="_gsT6gNbIEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gsVIoNbIEeeYNf-cNOerxA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gsVIodbIEeeYNf-cNOerxA" value="1"/>
       </ownedAttribute>
@@ -256,10 +254,11 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_4sAnINbDEeeYNf-cNOerxA" name="radius" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_538cgtbIEeeYNf-cNOerxA" name="robotavatar" type="_5POiIM1xEee4oNKddcTgcw" association="_5371cNbIEeeYNf-cNOerxA">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_538cgtbIEeeYNf-cNOerxA" name="robotavatar" visibility="private" type="_5POiIM1xEee4oNKddcTgcw" association="_5371cNbIEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_539DkNbIEeeYNf-cNOerxA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_539DkdbIEeeYNf-cNOerxA" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wqVvINdlEeedBZca6xz8Nw" name="gatekeeper" visibility="private" type="_hpGsMNbDEeeYNf-cNOerxA"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ADubkNbEEeeYNf-cNOerxA" name="getCenter">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ADubkdbEEeeYNf-cNOerxA" name="center" type="_kvLnAM6ZEeeexou2H9X39g" direction="return"/>
       </ownedOperation>
