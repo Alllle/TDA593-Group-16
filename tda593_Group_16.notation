@@ -268,10 +268,6 @@
             <element xmi:type="uml:Operation" href="tda593_Group_16.uml#_JyFLgNapEeeYNf-cNOerxA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_lPHIZdapEeeYNf-cNOerxA"/>
           </children>
-          <children xmi:type="notation:Shape" xmi:id="_lPHvcNapEeeYNf-cNOerxA" type="Operation_ClassOperationLabel">
-            <element xmi:type="uml:Operation" href="tda593_Group_16.uml#_ONauYNapEeeYNf-cNOerxA"/>
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_lPHvcdapEeeYNf-cNOerxA"/>
-          </children>
           <children xmi:type="notation:Shape" xmi:id="_lPHvctapEeeYNf-cNOerxA" type="Operation_ClassOperationLabel">
             <element xmi:type="uml:Operation" href="tda593_Group_16.uml#_axujgNapEeeYNf-cNOerxA"/>
             <layoutConstraint xmi:type="notation:Location" xmi:id="_lPHvc9apEeeYNf-cNOerxA"/>

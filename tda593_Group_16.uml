@@ -122,8 +122,12 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Rtd9Mc1zEee4oNKddcTgcw" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_ECwR8M15Eee4oNKddcTgcw" name="environment" visibility="private" type="_QIFJMM1yEee4oNKddcTgcw"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_dfc1YNamEeeYNf-cNOerxA" name="views" visibility="private"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="__jaNgNanEeeYNf-cNOerxA" name="gatekeepers" visibility="private" type="_-3b4UNanEeeYNf-cNOerxA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_dfc1YNamEeeYNf-cNOerxA" name="views" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__jaNgNanEeeYNf-cNOerxA" name="gatekeepers" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dfeLEtbIEeeYNf-cNOerxA" name="environment" type="_QIFJMM1yEee4oNKddcTgcw" association="_dfdkANbIEeeYNf-cNOerxA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dfeLE9bIEeeYNf-cNOerxA" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dfeyINbIEeeYNf-cNOerxA" value="1"/>
@@ -137,7 +141,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ex7d0NbJEeeYNf-cNOerxA" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_9z90cM14Eee4oNKddcTgcw" name="registerView" visibility="private">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9z90cc14Eee4oNKddcTgcw" name="view"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9z90cc14Eee4oNKddcTgcw" name="view" type="_9F0_sNbGEeeYNf-cNOerxA"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="__nY54M14Eee4oNKddcTgcw" name="notify" visibility="private"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_B_75YM6cEeeexou2H9X39g" name="getPoints">
@@ -172,9 +176,6 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_JyFLgNapEeeYNf-cNOerxA" name="executeMission">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_JyFLgdapEeeYNf-cNOerxA" name="robot" type="_Lo9DANaoEeeYNf-cNOerxA"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ONauYNapEeeYNf-cNOerxA" name="registerView">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ONauYdapEeeYNf-cNOerxA" name="view"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_axujgNapEeeYNf-cNOerxA" name="addMissionToRobot">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_axujgdapEeeYNf-cNOerxA" name="m" type="_LTGXQM1yEee4oNKddcTgcw"/>
