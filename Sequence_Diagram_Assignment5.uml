@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Z-gDQNvtEeeFUPZmLtzSdw" name="Sequence_Diagram_Assignment5">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_eWG8sNvtEeeFUPZmLtzSdw" name="Interaction1">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_h3pJwNvtEeeFUPZmLtzSdw" name="Controller"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_kf6zkNvtEeeFUPZmLtzSdw" name="RobotAvatar"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_mXojINvtEeeFUPZmLtzSdw" name="Strategy"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_nzrDUNvtEeeFUPZmLtzSdw" name="View"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_lIougNvvEeeFUPZmLtzSdw" name="Main"/>
+  </packagedElement>
+</uml:Model>

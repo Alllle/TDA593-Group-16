@@ -21,6 +21,15 @@ public class RobotAvatar extends AbstractRobotSimulator {
 		// TODO Auto-generated constructor stub
 		this.gps = new GPS();
 		robotId = name;
+		this.strategy = null;
+	}
+	
+	public RobotAvatar(Point position, String name, Strategy strategy) {
+		super(position, name);
+		// TODO Auto-generated constructor stub
+		this.gps = new GPS();
+		robotId = name;
+		this.strategy = strategy;
 	}
 	
 	private GPS gps;
@@ -37,7 +46,10 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	 * 
 	 */
 	private String robotId;
-
+	/**
+	 * 
+	 */
+	private Strategy strategy;
 	/**
 	 * 
 	 * @return 
