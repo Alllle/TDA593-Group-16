@@ -20,6 +20,7 @@ public class RewardSystem extends TimerTask {
 		this.areas = areas;
 		this.robots = robots;
 	}
+	
 	/**
 	 * 
 	 */
@@ -46,7 +47,9 @@ public class RewardSystem extends TimerTask {
 	}
 	
 	private void calculatePoints() {
+		System.out.println("is it an empty list of areas? " + areas.size());
 		for(Area a : areas) {
+			//System.out.println("is it a physical area? " + (a instanceof PhysicalArea));
 			if(a instanceof PhysicalArea && procedureA) {
 				for(RobotAvatar r : robots) {
 					if(a.containsRobot(r)) {
@@ -66,6 +69,8 @@ public class RewardSystem extends TimerTask {
 	@Override
 	public void run() {
 		calculatePoints();
+		System.out.println("Current rewardpoints are: " + getRewardPoint());
 		setProcedure(!procedureA);
+		System.out.println("Rewardpoints is running procedure A: " + procedureA);
 	}
 };
