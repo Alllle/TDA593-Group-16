@@ -70,7 +70,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	
 	private void init() {
 		/*20000 = 20 SECONDS, CHANGE THIS IF YOU WANT A DIFFERENT UPDATE RATE OF REWARDPOINTS*/
-		rewardTimer.scheduleAtFixedRate(rs, 3000, 3000);
+		rewardTimer.scheduleAtFixedRate(rs, 10000, 10000);
 	}
 	
 	public double distance(RobotAvatar r, Gatekeeper gk) {
