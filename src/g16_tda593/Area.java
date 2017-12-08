@@ -12,12 +12,20 @@ import simbad.sim.EnvironmentDescription;
  */
 public abstract class Area {
 	
-	public Area(Span span) {
+	private int pointsRewarded;
+	
+	public Area(Span span, int reward) {
 		this.span = span;
+		this.pointsRewarded = reward;
 	}
 	
-	public Area(float f, float g, float h, float i) {
-		this.span = new Span(f,g,h,i);
+	public Area(float x1, float x2, float y1, float y2, int reward) {
+		this.span = new Span(x1,x2,y1,y2);
+		this.pointsRewarded = reward;
+	}
+	
+	public int getReward() {
+		return pointsRewarded;
 	}
 
 	/**
@@ -43,5 +51,15 @@ public abstract class Area {
 	 */
 	public Span getSpan() {
 		return span;
+	}
+	
+	public boolean containsRobot(RobotAvatar r) {
+		if(r.getPosition().getX() <= span.y2 &&
+				r.getPosition().getZ() <= span.x2 &&
+				r.getPosition().getZ() >= span.x1 &&
+				r.getPosition().getX() >= span.y1) {
+			return true;
+		}
+		return false;
 	}
 };

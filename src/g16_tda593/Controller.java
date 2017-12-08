@@ -9,6 +9,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.Timer;
 
 import project.AbstractRobotSimulator;
 import project.AbstractSimulatorMonitor;
@@ -30,6 +31,8 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	 * 
 	 */
 	private List<View> views;
+	
+	private Timer rewardTimer;
 	/**
 	 * 
 	 */
@@ -58,8 +61,16 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		this.robots = robots;
 		gatekeepers = new ArrayList<Gatekeeper>();
 		environment = new Environment(e);
-		rs = new RewardSystem();
+		rs = new RewardSystem(environment.getAreas(), robots);
+		rewardTimer = new Timer();
+		init();
 		
+	}
+	
+	private void init() {
+		/*20000 = 20 SECONDS, CHANGE THIS IF YOU WANT A DIFFERENT UPDATE RATE OF REWARDPOINTS*/
+
+		rewardTimer.scheduleAtFixedRate(rs, 20000, 20000);
 	}
 	
 	public double distance(RobotAvatar r, Gatekeeper gk) {

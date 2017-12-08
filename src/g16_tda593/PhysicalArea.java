@@ -17,12 +17,12 @@ import simbad.sim.VerticalWall;
  */
 public class PhysicalArea extends Area {
 	
-	public PhysicalArea(Span span) {
-		super(span);
+	public PhysicalArea(Span span, int reward) {
+		super(span, reward);
 	}
 
-	public PhysicalArea(float f, float g, float h, float i) {
-		super(f,g,h,i);
+	public PhysicalArea(float f, float g, float h, float i, int reward) {
+		super(f,g,h,i, reward);
 	}
 
 	/**

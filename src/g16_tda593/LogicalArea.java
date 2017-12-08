@@ -13,9 +13,8 @@ import simbad.sim.EnvironmentDescription;
  * 
  */
 public class LogicalArea extends Area {
-	public LogicalArea(Span span) {
-		super(span);
-		// TODO Auto-generated constructor stub
+	public LogicalArea(Span span, int reward) {
+		super(span, reward);
 	}
 
 	/**

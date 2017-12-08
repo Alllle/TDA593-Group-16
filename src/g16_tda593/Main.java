@@ -65,7 +65,7 @@ public class Main {
 		
 		
 		//Bottom right room!
-		PhysicalArea area = new PhysicalArea(0f,0f,5f,5f);
+		PhysicalArea area = new PhysicalArea(0f,0f,5f,5f, 20);
 		area.addWall(5f, 3.75f, 5f, 'h', e);
 		area.addWall(5f, 0f, 1.25f, 'h', e);
 		
@@ -79,7 +79,7 @@ public class Main {
 		area.addWall(0f, 0f, 1.25f, 'v', e);
 		
 		//Top right room!
-		PhysicalArea area2 = new PhysicalArea(0f,-5f,5f,5f);
+		PhysicalArea area2 = new PhysicalArea(0f,-5f,5f,5f, 20);
 		area2.addWall(5f, -5f, -3.75f, 'h', e);
 		area2.addWall(5f, -1.25f, 0f, 'h', e);
 		
@@ -89,7 +89,7 @@ public class Main {
 		area2.addWall(-5f, 0f, 5f, 'v', e);
 		
 		//Bottom right room!
-		PhysicalArea area3 = new PhysicalArea(-5f,0f,5f,5f);
+		PhysicalArea area3 = new PhysicalArea(-5f,0f,5f,5f, 20);
 		area3.addWall(-5f, 3.75f, 5f, 'h', e);
 		area3.addWall(-5f, 0f, 1.25f, 'h', e);
 				
@@ -103,7 +103,7 @@ public class Main {
 		area3.addWall(0f, -1.25f, 0f, 'v', e);
 				
 		//Top right room!
-		PhysicalArea area4 = new PhysicalArea(-5f,-5f,5f,5f);
+		PhysicalArea area4 = new PhysicalArea(-5f,-5f,5f,5f, 20);
 		area4.addWall(-5f, -5f, -3.75f, 'h', e);
 		area4.addWall(-5f, -1.25f, 0f, 'h', e);
 				

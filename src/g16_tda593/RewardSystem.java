@@ -4,11 +4,22 @@
 
 package g16_tda593;
 
+import java.util.List;
+import java.util.Set;
+import java.util.TimerTask;
+
 /************************************************************/
 /**
  * 
  */
-public class RewardSystem {
+public class RewardSystem extends TimerTask {
+	private List<Area> areas;
+	private Set<RobotAvatar> robots;
+	
+	public RewardSystem(List<Area> areas, Set<RobotAvatar> robots) {
+		this.areas = areas;
+		this.robots = robots;
+	}
 	/**
 	 * 
 	 */
@@ -23,6 +34,7 @@ public class RewardSystem {
 	 * @param procedure 
 	 */
 	private void setProcedure(boolean procedure) {
+		procedureA = procedure;
 	}
 
 	/**
@@ -31,5 +43,29 @@ public class RewardSystem {
 	 */
 	public int getRewardPoint() {
 		return this.rewardPoint;
+	}
+	
+	private void calculatePoints() {
+		for(Area a : areas) {
+			if(a instanceof PhysicalArea && procedureA) {
+				for(RobotAvatar r : robots) {
+					if(a.containsRobot(r)) {
+						rewardPoint = rewardPoint + a.getReward();
+					}
+				}
+			} else if(a instanceof LogicalArea && !procedureA) {
+				for(RobotAvatar r : robots) {
+					if(a.containsRobot(r)) {
+						rewardPoint = rewardPoint + a.getReward();
+					}
+				}
+			}	
+		}
+	}
+
+	@Override
+	public void run() {
+		calculatePoints();
+		setProcedure(!procedureA);
 	}
 };
