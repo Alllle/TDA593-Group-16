@@ -119,7 +119,6 @@ public class Main {
 		environment.addPhysicalRoom(area3);
 		environment.addPhysicalRoom(area4);
 		
-		
 		//TODO: Add environment description
 		Controller controller = new Controller(robots, environment.getEnvironment());
 		

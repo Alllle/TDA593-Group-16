@@ -33,6 +33,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	private List<View> views;
 	
 	private Timer rewardTimer;
+	private Timer strategyTimer;
 	/**
 	 * 
 	 */
@@ -64,7 +65,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		rs = new RewardSystem(environment.getAreas(), robots);
 		rewardTimer = new Timer();
 		init();
-		
+		this.strategyTimer = new Timer();
 	}
 	
 	private void init() {
@@ -83,8 +84,22 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	public void update(RobotAvatar robot) {
 		if(!robot.getMission().getPoints().isEmpty()) {
 			if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
-				robot.getMission().getPoints().pop();
-				executeMission(robot);
+				if(robot.getStrategy() != null) {	
+					if(!robot.getStrategy().isLocked()) {
+						robot.getStrategy().setCurrentTime(System.currentTimeMillis());
+						robot.getStrategy().setLocked(true);
+					} if(robot.getStrategy().isLocked() == true && System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
+						robot.setDestination(robot.getPosition());
+					} else {
+						robot.getMission().getPoints().pop();
+						executeMission(robot);
+						robot.getStrategy().setLocked(false);
+					}
+				}
+				else {
+					robot.getMission().getPoints().pop();
+					executeMission(robot);
+				}
 			} else {
 				executeMission(robot);
 			}

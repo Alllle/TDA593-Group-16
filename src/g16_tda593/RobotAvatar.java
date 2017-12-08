@@ -5,6 +5,7 @@
 package g16_tda593;
 
 import java.util.List;
+import java.util.Timer;
 import project.AbstractRobotSimulator;
 import project.Point;
 import g16_tda593.Mission;
@@ -33,7 +34,6 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	}
 	
 	private GPS gps;
-
 	/**
 	 * 
 	 */
@@ -84,6 +84,10 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	 */
 	public Point getMissionPosition() {
 		return this.gps.getValue();
+	}
+	
+	public Strategy getStrategy() {
+		return this.strategy;
 	}
 	
 	public void setMission(Mission m) {

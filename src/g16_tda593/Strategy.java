@@ -1,23 +1,28 @@
 package g16_tda593;
 
-import java.util.concurrent.TimeUnit;
-
-
 public class Strategy {
-
+	
+	private boolean locked;
+	private long currentTime;
 	
 	public Strategy() {
-		
-	}
-	
-	public void run() {
-		try {
-			TimeUnit.SECONDS.sleep(2);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+		this.locked = false;
 	}
 
+
+	public boolean isLocked() {
+		return locked;
+	}
+
+	public void setLocked(boolean locked) {
+		this.locked = locked;
+	}
+
+	public long getCurrentTime() {
+		return currentTime;
+	}
+
+	public void setCurrentTime(long currentTime) {
+		this.currentTime = currentTime;
+	}
 }
