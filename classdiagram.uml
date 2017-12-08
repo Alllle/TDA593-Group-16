@@ -305,6 +305,10 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nV9ZoNW4Eee_uKo27O12zg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nV9ZodW4Eee_uKo27O12zg" value="*"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NPNecNvzEeeFUPZmLtzSdw" name="strategy" type="_JZyFANvzEeeFUPZmLtzSdw" association="_NPE7kNvzEeeFUPZmLtzSdw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NPP6sNvzEeeFUPZmLtzSdw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NPQhwNvzEeeFUPZmLtzSdw" value="2"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_pbxK0NVQEeefPZdaWwFbGA" name="getId">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_pbxK0dVQEeefPZdaWwFbGA" name="id" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -341,5 +345,12 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JZyFANvzEeeFUPZmLtzSdw" name="Strategy"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NPE7kNvzEeeFUPZmLtzSdw" memberEnd="_NPNecNvzEeeFUPZmLtzSdw _NPQhwdvzEeeFUPZmLtzSdw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NPLpQNvzEeeFUPZmLtzSdw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NPLpQdvzEeeFUPZmLtzSdw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NPQhwdvzEeeFUPZmLtzSdw" name="robot" type="_v7LdUNSXEeefPZdaWwFbGA" association="_NPE7kNvzEeeFUPZmLtzSdw"/>
   </packagedElement>
 </uml:Model>
