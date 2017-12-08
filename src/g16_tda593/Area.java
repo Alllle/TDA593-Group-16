@@ -19,8 +19,8 @@ public abstract class Area {
 		this.pointsRewarded = reward;
 	}
 	
-	public Area(float x1, float x2, float y1, float y2, int reward) {
-		this.span = new Span(x1,x2,y1,y2);
+	public Area(float x1, float y1, float x2, float y2, int reward) {
+		this.span = new Span(x1,y1,x2,y2);
 		this.pointsRewarded = reward;
 	}
 	
@@ -54,10 +54,12 @@ public abstract class Area {
 	}
 	
 	public boolean containsRobot(RobotAvatar r) {
-		if(r.getPosition().getX() <= span.y2 &&
-				r.getPosition().getZ() <= span.x2 &&
-				r.getPosition().getZ() >= span.x1 &&
-				r.getPosition().getX() >= span.y1) {
+		//System.out.println("Position of robot is: X: " + r.getPosition().getX() + " Z: " + r.getPosition().getZ());
+		//System.out.println("Span is between " + span.x1 + " to " + span.x2 + " in X direction");
+		//System.out.println("Span is between " + span.y1 + " to " + span.y2 + " in Y direction");
+		if((r.getPosition().getX() >= span.x1 && r.getPosition().getX() <= span.x2) &&
+				(r.getPosition().getZ() >= span.y1 && r.getPosition().getZ() <= span.y2)){
+			System.out.println("There is a motherfuckin robot in here");
 			return true;
 		}
 		return false;

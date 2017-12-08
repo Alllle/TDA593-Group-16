@@ -7,7 +7,7 @@ package g16_tda593;
  */
 public class Span {
 	public float x1,x2,y1,y2;
-	public Span (float x1, float x2, float y1, float y2) {
+	public Span (float x1, float y1, float x2, float y2) {
 		this.x1 = x1;
 		this.y1 = y1;
 		this.x2 = x2;

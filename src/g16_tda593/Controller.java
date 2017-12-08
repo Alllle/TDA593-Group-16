@@ -54,13 +54,13 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	 */
 	private RewardSystem rs;
 	
-	public Controller(Set<RobotAvatar> robots, EnvironmentDescription e) {
+	public Controller(Set<RobotAvatar> robots, EnvironmentDescription e, Environment environment) {
 		super(robots, e);
 		views = new ArrayList<View>();
 		//missions = new ArrayList<Mission>();
 		this.robots = robots;
 		gatekeepers = new ArrayList<Gatekeeper>();
-		environment = new Environment(e);
+		this.environment = environment;
 		rs = new RewardSystem(environment.getAreas(), robots);
 		rewardTimer = new Timer();
 		init();
@@ -69,8 +69,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	
 	private void init() {
 		/*20000 = 20 SECONDS, CHANGE THIS IF YOU WANT A DIFFERENT UPDATE RATE OF REWARDPOINTS*/
-
-		rewardTimer.scheduleAtFixedRate(rs, 20000, 20000);
+		rewardTimer.scheduleAtFixedRate(rs, 3000, 3000);
 	}
 	
 	public double distance(RobotAvatar r, Gatekeeper gk) {
