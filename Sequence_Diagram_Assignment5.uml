@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Z-gDQNvtEeeFUPZmLtzSdw" name="Sequence_Diagram_Assignment5">
   <packagedElement xmi:type="uml:Interaction" xmi:id="_eWG8sNvtEeeFUPZmLtzSdw" name="Interaction1">
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_h3pJwNvtEeeFUPZmLtzSdw" name="Controller"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_kf6zkNvtEeeFUPZmLtzSdw" name="RobotAvatar"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_mXojINvtEeeFUPZmLtzSdw" name="Strategy"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_nzrDUNvtEeeFUPZmLtzSdw" name="View"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_lIougNvvEeeFUPZmLtzSdw" name="Main"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_kf6zkNvtEeeFUPZmLtzSdw" name="r:RobotAvatar" coveredBy="_dO3zAN4KEeeCUfpX95yxyw _gA71gN4LEeeCUfpX95yxyw _8rLMYN4LEeeCUfpX95yxyw __DzQoN4LEeeCUfpX95yxyw _TohR4N4MEeeCUfpX95yxyw _UeGPAd4MEeeCUfpX95yxyw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_mXojINvtEeeFUPZmLtzSdw" name="s:Strategy" coveredBy="_dO3zAN4KEeeCUfpX95yxyw _gA71gN4LEeeCUfpX95yxyw _8rLzcN4LEeeCUfpX95yxyw __DyCgN4LEeeCUfpX95yxyw _Toh48N4MEeeCUfpX95yxyw _UeGPAN4MEeeCUfpX95yxyw _TpRf0N4MEeeCUfpX95yxyw _8r_rwN4LEeeCUfpX95yxyw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__DyCgN4LEeeCUfpX95yxyw" name="Message1SendEvent" covered="_mXojINvtEeeFUPZmLtzSdw" message="__Dw0YN4LEeeCUfpX95yxyw"/>
+    <fragment xmi:type="uml:CombinedFragment" xmi:id="_dO3L8N4KEeeCUfpX95yxyw" name="CombinedFragment1" interactionOperator="alt">
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_dO3zAN4KEeeCUfpX95yxyw" name="InteractionOperand1" covered="_mXojINvtEeeFUPZmLtzSdw _kf6zkNvtEeeFUPZmLtzSdw">
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8rLMYN4LEeeCUfpX95yxyw" name="Message1SendEvent" covered="_kf6zkNvtEeeFUPZmLtzSdw" message="_8rKlUN4LEeeCUfpX95yxyw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_8rLzcN4LEeeCUfpX95yxyw" name="Message1ReceiveEvent" covered="_mXojINvtEeeFUPZmLtzSdw" message="_8rKlUN4LEeeCUfpX95yxyw"/>
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_dO3zAd4KEeeCUfpX95yxyw" name="a.containsRobot" constrainedElement="_kf6zkNvtEeeFUPZmLtzSdw">
+          <specification xmi:type="uml:LiteralString" xmi:id="_bSCoAN4MEeeCUfpX95yxyw" value="!a.containsRobot(r)"/>
+        </guard>
+      </operand>
+      <operand xmi:type="uml:InteractionOperand" xmi:id="_gA71gN4LEeeCUfpX95yxyw" name="InteractionOperand2" covered="_mXojINvtEeeFUPZmLtzSdw _kf6zkNvtEeeFUPZmLtzSdw">
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__DzQoN4LEeeCUfpX95yxyw" name="Message1ReceiveEvent" covered="_kf6zkNvtEeeFUPZmLtzSdw" message="__Dw0YN4LEeeCUfpX95yxyw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TohR4N4MEeeCUfpX95yxyw" name="Message1SendEvent" covered="_kf6zkNvtEeeFUPZmLtzSdw" message="_Togq0N4MEeeCUfpX95yxyw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Toh48N4MEeeCUfpX95yxyw" name="Message1ReceiveEvent" covered="_mXojINvtEeeFUPZmLtzSdw" message="_Togq0N4MEeeCUfpX95yxyw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UeGPAN4MEeeCUfpX95yxyw" name="Message2SendEvent" covered="_mXojINvtEeeFUPZmLtzSdw" message="_UeFn8N4MEeeCUfpX95yxyw"/>
+        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_UeGPAd4MEeeCUfpX95yxyw" name="Message2ReceiveEvent" covered="_kf6zkNvtEeeFUPZmLtzSdw" message="_UeFn8N4MEeeCUfpX95yxyw"/>
+        <guard xmi:type="uml:InteractionConstraint" xmi:id="_gA-RwN4LEeeCUfpX95yxyw" name="guard"/>
+      </operand>
+    </fragment>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_8r_rwN4LEeeCUfpX95yxyw" name="BehaviorExecutionSpecification1" covered="_mXojINvtEeeFUPZmLtzSdw" finish="__DyCgN4LEeeCUfpX95yxyw" start="_8rLzcN4LEeeCUfpX95yxyw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_TpRf0N4MEeeCUfpX95yxyw" name="BehaviorExecutionSpecification2" covered="_mXojINvtEeeFUPZmLtzSdw" finish="_UeGPAN4MEeeCUfpX95yxyw" start="_Toh48N4MEeeCUfpX95yxyw"/>
+    <message xmi:type="uml:Message" xmi:id="_8rKlUN4LEeeCUfpX95yxyw" name="getStrategy()" receiveEvent="_8rLzcN4LEeeCUfpX95yxyw" sendEvent="_8rLMYN4LEeeCUfpX95yxyw"/>
+    <message xmi:type="uml:Message" xmi:id="__Dw0YN4LEeeCUfpX95yxyw" name="currentTime:long" messageSort="reply" receiveEvent="__DzQoN4LEeeCUfpX95yxyw" sendEvent="__DyCgN4LEeeCUfpX95yxyw"/>
+    <message xmi:type="uml:Message" xmi:id="_Togq0N4MEeeCUfpX95yxyw" name="getStrategy()" receiveEvent="_Toh48N4MEeeCUfpX95yxyw" sendEvent="_TohR4N4MEeeCUfpX95yxyw"/>
+    <message xmi:type="uml:Message" xmi:id="_UeFn8N4MEeeCUfpX95yxyw" name="locked:boolean" messageSort="reply" receiveEvent="_UeGPAd4MEeeCUfpX95yxyw" sendEvent="_UeGPAN4MEeeCUfpX95yxyw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_IeZd8Ny7EeehqvIZho4ADQ" name="Interaction2">
     <lifeline xmi:type="uml:Lifeline" xmi:id="_T52NkNy7EeehqvIZho4ADQ" name=":Controller" coveredBy="_GOgEIN4JEeeCUfpX95yxyw _7-Wm0N4EEeehqvIZho4ADQ _OU_VAN4HEeeCUfpX95yxyw _mZ8i0N4HEeeCUfpX95yxyw _7hwDAN4HEeeCUfpX95yxyw _ACY8oN4IEeeCUfpX95yxyw _FoozcN4IEeeCUfpX95yxyw _Jkou8N4IEeeCUfpX95yxyw _OxenQN4IEeeCUfpX95yxyw _XY4-cN4HEeeCUfpX95yxyw _gLm70N4IEeeCUfpX95yxyw"/>
