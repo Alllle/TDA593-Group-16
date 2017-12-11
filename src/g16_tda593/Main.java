@@ -21,14 +21,14 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		
 		Set<RobotAvatar> robots = new HashSet<RobotAvatar>();
-		RobotAvatar robot1 = new RobotAvatar(new Point(7, -2), "Robot 1", new Strategy());
-		RobotAvatar robot2 = new RobotAvatar(new Point(6, -2), "Robot 2", new Strategy());
-		RobotAvatar robot3 = new RobotAvatar(new Point(6, 2), "Robot 3", new Strategy());
-		RobotAvatar robot4 = new RobotAvatar(new Point(7, 2), "Robot 4", new Strategy());
+		RobotAvatar robot1 = new RobotAvatar(new Point(-3, 8), "Robot 1", new Strategy());
+		RobotAvatar robot2 = new RobotAvatar(new Point(-3, 3), "Robot 2", new Strategy());
+		RobotAvatar robot3 = new RobotAvatar(new Point(-3, -2), "Robot 3", new Strategy());
+		RobotAvatar robot4 = new RobotAvatar(new Point(-3, -7), "Robot 4", new Strategy());
 		
 		Mission mission1 = new Mission(1);
-		mission1.addPoint(new Point(-3.5, -3.5));
-		mission1.addPoint(new Point(-7, -2));
+		mission1.addPoint(new Point(7.5, 0));
+		mission1.addPoint(new Point(-2.5, 7.5 ));
 		
 		Mission mission2 = new Mission(2);
 		mission2.addPoint(new Point(3.5, -3.5));
@@ -64,7 +64,10 @@ public class Main {
 		EnvironmentDescription e = new EnvironmentDescription();
 		
 		
-		//Bottom right room!
+		/*
+		 * Assignment 3 room
+		 * 
+		 * //Bottom right room!
 		PhysicalArea area = new PhysicalArea(0,0,5,5, 20);
 		area.addWall(5f, 3.75f, 5f, 'h', e);
 		area.addWall(5f, 0f, 1.25f, 'h', e);
@@ -111,13 +114,78 @@ public class Main {
 		area4.addWall(0f, -1.25f, 0f, 'h', e);
 				
 		area4.addWall(-5f, -5f, 0f, 'v', e);
-
+*/
+		
+		/*
+		 * Assignment 5 room
+		 * */
+		
+		PhysicalArea corridor = new PhysicalArea(5,15,10,-10, 0);
+		corridor.addWall(-10f, 0f, 5f, 'v', e, Color.BLACK);
+		corridor.addWall(10f, 0f, 5f, 'v', e, Color.BLACK);
+		
+		corridor.addWall(5f, 0.75f, 10f, 'h', e, Color.BLACK);
+		corridor.addWall(5f, -10f, -0.75f, 'h', e, Color.BLACK);
+		
+		PhysicalArea surgery1 = new PhysicalArea(-5,5,5,5, 20);
+		surgery1.addWall(-5f, 5f, 10f, 'h', e, Color.PINK);
+		
+		surgery1.addWall(0f, 8.75f, 10f, 'h', e, Color.PINK);
+		surgery1.addWall(0f, 5f, 6.25f, 'h', e, Color.PINK);
+				
+		//Bottom wall
+		surgery1.addWall(10f, -5f, 0f, 'v', e, Color.PINK);
+			
+		
+		PhysicalArea surgery2 = new PhysicalArea(-5,0,5,5, 20);
+		surgery2.addWall(-5f, 0f, 5f, 'h', e, Color.BLUE);
+				
+		surgery2.addWall(0f, 3.75f, 5f, 'h', e, Color.BLUE);
+		surgery2.addWall(0f, 0f, 1.25f, 'h', e, Color.BLUE);
+				
+		//Bottom wall
+		surgery2.addWall(5f, -5f, -3.75f, 'v', e, Color.BLUE);
+		surgery2.addWall(5f, -1.25f, 0f, 'v', e, Color.BLUE);
+			
+		surgery2.addWall(0f, -5f, -3.75f, 'v', e, Color.BLUE);
+		surgery2.addWall(0f, -1.25f, 0f, 'v', e, Color.BLUE);
+		
+		PhysicalArea surgery3 = new PhysicalArea(-5,-5,5,5, 20);
+		surgery3.addWall(-5f, -5f, 0f, 'h', e, Color.CYAN);
+				
+		surgery3.addWall(0f, -5f, -3.75f, 'h', e, Color.CYAN);
+		surgery3.addWall(0f, -1.25f, 0f, 'h', e, Color.CYAN);
+				
+		surgery3.addWall(-5f, -5f, -3.75f, 'v', e, Color.CYAN);
+		surgery3.addWall(-5f, -1.25f, 0f, 'v', e, Color.CYAN);
+		
+		PhysicalArea surgery4 = new PhysicalArea(-5,-10,5,5, 20);
+		surgery4.addWall(-5f, -10f, -5f, 'h', e, Color.RED);
+		
+		surgery4.addWall(0f, -10f, -8.75f, 'h', e, Color.RED);
+		surgery4.addWall(0f, -6.25f, -5f, 'h', e, Color.RED);
+				
+		surgery4.addWall(-10f, -5f, 0f, 'v', e, Color.RED);
+		
+		PhysicalArea consulting = new PhysicalArea(5f,10f,-2.5f, 2.5f, 20);
+		consulting.addWall(10f, -2.5f, 2.5f, 'h', e, Color.ORANGE);
+		
+		consulting.addWall(2.5f, 5f, 10f, 'v', e, Color.ORANGE);
+		consulting.addWall(-2.5f, 5f, 10f, 'v', e, Color.ORANGE);
+			
+		
+		LogicalArea wifi = new LogicalArea(-5,-5,0,-10, 10);
+		LogicalArea eatingArea = new LogicalArea(5,10,-2.5f,2.5f, 20);
 		
 		Environment environment = new Environment(e);
-		environment.addPhysicalRoom(area);
-		environment.addPhysicalRoom(area2);
-		environment.addPhysicalRoom(area3);
-		environment.addPhysicalRoom(area4);
+		environment.addRoom(surgery1);
+		environment.addRoom(surgery2);
+		environment.addRoom(surgery3);
+		environment.addRoom(surgery4);
+		environment.addRoom(consulting);
+		environment.addRoom(corridor);
+		environment.addRoom(wifi);
+		environment.addRoom(eatingArea);
 		
 		//TODO: Add environment description
 		Controller controller = new Controller(robots, environment.getEnvironment(), environment);
@@ -126,8 +194,20 @@ public class Main {
 		controller.addMission(mission2);
 		controller.addMission(mission3);
 		controller.addMission(mission4);*/
-		controller.addLocationController(new Gatekeeper(new Point(3, 3.5), 3, e));
-		controller.addLocationController(new Gatekeeper(new Point(3, -3.5), 3, e));
+		controller.addLocationController(new Gatekeeper(new Point(-2.5, -7.5), 3, e));
+		controller.addLocationController(new Gatekeeper(new Point(-2.5, -2.5), 3, e));
+		controller.addLocationController(new Gatekeeper(new Point(-2.5, 2.5), 3, e));
+		controller.addLocationController(new Gatekeeper(new Point(-2.5, 7.5), 3, e));
+		
+		//LocationControllers for the corridor
+		//TODO how tf do i add locationControllers for a non cubic room?
+		
+		//LocationController for consultingRoom
+		controller.addLocationController(new Gatekeeper(new Point(7.5, 0), 3, e));
+		
+		//Locationcontrollers for assignment 3
+		//controller.addLocationController(new Gatekeeper(new Point(3, 3.5), 3, e));
+		//controller.addLocationController(new Gatekeeper(new Point(3, -3.5), 3, e));
 		
 		
 		controller.executeMission(robot1);

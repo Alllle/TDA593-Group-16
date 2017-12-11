@@ -32,8 +32,7 @@ public class PhysicalArea extends Area {
 	 * @param c Width/height (i don't really get it either)
 	 * @param direction Specifies if the wall is horizontal (h) or vertical (v) if not specified it defaults to v.
 	 */
-	public void addWall(float a, float b, float c, char direction, EnvironmentDescription e) {
-		Color color = Color.BLACK;
+	public void addWall(float a, float b, float c, char direction, EnvironmentDescription e, Color color) {
 		if(direction == 'h') {
 			AbstractWall wall = new HorizontalWall(a,b,c,e, color);
 		}else {

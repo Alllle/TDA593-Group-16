@@ -32,7 +32,7 @@ public class Environment {
 	public List<Area> getAreas() {
 		return areas;
 	}
-	public void addPhysicalRoom(PhysicalArea area) {
+	public void addRoom(Area area) {
 		this.areas.add(area);
 	}
 	public EnvironmentDescription getEnvironment() {
