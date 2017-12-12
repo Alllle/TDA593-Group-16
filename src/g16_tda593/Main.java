@@ -176,24 +176,13 @@ public class Main {
 		environment.addRoom(wifi);
 		environment.addRoom(eatingArea);
 		
-		//TODO: Add environment description
 		Controller controller = new Controller(robots, environment.getEnvironment(), environment);
 		
-	/*	controller.addMission(mission1);
-		controller.addMission(mission2);
-		controller.addMission(mission3);
-		controller.addMission(mission4);*/
 		controller.addLocationController(new Gatekeeper(new Point(0, -5), 3, e));
 		controller.addLocationController(new Gatekeeper(new Point(-5, 0), 3, e));
 		controller.addLocationController(new Gatekeeper(new Point(0, 5), 3, e));
 		controller.addLocationController(new Gatekeeper(new Point(5, 0), 3, e));
 		controller.addLocationController(new Gatekeeper(new Point(0, 0), 3, e));
-		
-		//LocationControllers for the corridor
-		//TODO how tf do i add locationControllers for a non cubic room?
-		
-		//LocationController for consultingRoom
-		controller.addLocationController(new Gatekeeper(new Point(7.5, 0), 3, e));
 		
 		//Locationcontrollers for assignment 3
 		//controller.addLocationController(new Gatekeeper(new Point(3, 3.5), 3, e));
