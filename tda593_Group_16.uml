@@ -174,7 +174,7 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_o4qhoN3_EeehqvIZho4ADQ" name="calculatePoints" visibility="private"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_sZe9AN3_EeehqvIZho4ADQ" name="run"/>
-      <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_UbaUsM10Eee4oNKddcTgcw" name="int"/>
+      <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_UbaUsM10Eee4oNKddcTgcw" name=""/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_z-VQQM1xEee4oNKddcTgcw" name="GUI">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_9qfd4NbEEeeYNf-cNOerxA" name="updateRobots">
