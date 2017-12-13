@@ -141,7 +141,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	}
 	
 	public void addMission(Mission m) {
-		System.out.println("ADding mission: " + m.getId());
+		System.out.println("Adding mission: " + m.getId());
 		//this.missions.add(m);
 	}
 	
