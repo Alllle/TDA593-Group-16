@@ -42,7 +42,7 @@ public class PhysicalArea extends Area {
 
 	/**
 	 * 
-	 * @return 
+	 * @return this areas environmentDescription
 	 */
 	public EnvironmentDescription getEnvironment() {
 		return super.getEnvironment();

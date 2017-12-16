@@ -4,6 +4,7 @@
 
 package g16_tda593;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
 import project.AbstractRobotSimulator;
@@ -20,7 +21,7 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	public RobotAvatar(Point position, String name) {
 		super(position, name);
 		// TODO Auto-generated constructor stub
-		this.gps = new GPS();
+		sensors.add(new GPS());
 		robotId = name;
 		this.strategy = null;
 	}
@@ -28,16 +29,15 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	public RobotAvatar(Point position, String name, Strategy strategy) {
 		super(position, name);
 		// TODO Auto-generated constructor stub
-		this.gps = new GPS();
+		this.sensors.add(new GPS());
 		robotId = name;
 		this.strategy = strategy;
 	}
 	
-	private GPS gps;
 	/**
 	 * 
 	 */
-	private List<Sensors> sensors;
+	private List<Sensors> sensors = new ArrayList<Sensors>();
 	/**
 	 * 
 	 */
@@ -67,7 +67,10 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	}
 	
 	public GPS getGPS() {
-		return this.gps;
+		for(Sensors s : sensors) {
+			if(s instanceof GPS) return (GPS) s;
+		}
+		return null;
 	}
 
 	/**
@@ -83,7 +86,7 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	 * @return 
 	 */
 	public Point getMissionPosition() {
-		return this.gps.getValue();
+		return getGPS().getValue();
 	}
 	
 	public Strategy getStrategy() {

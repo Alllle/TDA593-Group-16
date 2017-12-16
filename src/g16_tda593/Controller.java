@@ -140,14 +140,6 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		return this.environment;
 	}
 	
-	public void addMission(Mission m) {
-		System.out.println("Adding mission: " + m.getId());
-		//this.missions.add(m);
-	}
-	
-	//public ArrayList<Mission> getMissions() {
-		//return (ArrayList<Mission>) this.missions;
-//	}
 
 	/**
 	 * 
