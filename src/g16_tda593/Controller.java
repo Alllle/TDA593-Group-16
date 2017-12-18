@@ -82,58 +82,57 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 
 	@Override
 	public void update(RobotAvatar robot) {
-		if(!robot.getMission().getPoints().isEmpty()) {
-			if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
-				if(robot.getStrategy() != null) {	
-					if(!robot.getStrategy().isLocked()) {
+		if(robot.getStrategy().isLocked() && System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
+			robot.setDestination(robot.getPosition());
+		} else {
+			if(!robot.getMission().getPoints().isEmpty()) {
+				if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
+					if(!robot.getStrategy().isLocked()) {							
 						robot.getStrategy().setCurrentTime(System.currentTimeMillis());
 						robot.getStrategy().setLocked(true);
-					} else if(System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
+					} else if(robot.getStrategy().isLocked() && System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
 						robot.getStrategy().setLocked(false);
 						robot.getMission().getPoints().pop();
 						executeMission(robot);
 					}
-				}
-				else {
-					robot.getMission().getPoints().pop();
+					else {
+						robot.getMission().getPoints().pop();
+						executeMission(robot);
+					}
+				} else {
+					robot.getStrategy().setLocked(false);
 					executeMission(robot);
 				}
-			} else {
-				if(robot.getStrategy().isLocked() && System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
-					robot.getStrategy().setLocked(false);
-					System.out.println("Do we get in here now?");
-				}
-				executeMission(robot);
 			}
-		}
-		
-		for(Gatekeeper k : gatekeepers) {
-			if(distance(robot, k) < k.getRadius()) {
-				if(!k.tryAcquire(robot) && k.getOwner().getId() != robot.getId()){
-					robot.setDestination(robot.getPosition());
-				} else if(k.getOwner() == null) {
-					k.setOwner(robot);
-				} else if(k.getOwner().getId() != robot.getId()) {
-					k.setOwner(robot);
-				}
-				
-			} else if(k.getOwner() != null && robot.getId() == k.getOwner().getId()) {
-				if(distance(robot, k) > k.getRadius()) {
-					k.release(robot);
-					k.setOwner(null);
+			
+			for(Gatekeeper k : gatekeepers) {
+				if(distance(robot, k) < k.getRadius()) {
+					if(!k.tryAcquire(robot) && k.getOwner().getId() != robot.getId()){
+						robot.setDestination(robot.getPosition());
+					} else if(k.getOwner() == null) {
+						k.setOwner(robot);
+					} else if(k.getOwner().getId() != robot.getId()) {
+						k.setOwner(robot);
+					}
+					
+				} else if(k.getOwner() != null && robot.getId() == k.getOwner().getId()) {
+					if(distance(robot, k) > k.getRadius()) {
+						k.release(robot);
+						k.setOwner(null);
+					}
 				}
 			}
-		}
-		
-		for(Area a : areas) {
-			if(a.containsRobot(robot) && a instanceof PhysicalArea) {
-				if(robot.getCurrentArea() == null) {
-					robot.setCurrentArea(a);
-				} else if(robot.getCurrentArea().getId() != a.getId()) {
-					robot.setCurrentArea(a);
-					robot.getStrategy().setCurrentTime(System.currentTimeMillis());
-					robot.getStrategy().setLocked(true);
-					robot.setDestination(robot.getPosition());
+			
+			for(Area a : areas) {
+				if(a.containsRobot(robot) && a instanceof PhysicalArea) {
+					if(robot.getCurrentArea() == null) {
+						robot.setCurrentArea(a);
+					} else if(robot.getCurrentArea().getId() != a.getId()) {
+						robot.setCurrentArea(a);
+						robot.getStrategy().setCurrentTime(System.currentTimeMillis());
+						robot.getStrategy().setLocked(true);
+						robot.setDestination(robot.getPosition());
+					}
 				}
 			}
 		}

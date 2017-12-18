@@ -125,7 +125,7 @@ public class Main {
 		// tredje x-led vänster
 		// 2a start 3e stop av vägg längd
 		// (-7.5, 2.5) (-7.5, -2.5) (-2.5, -2.5) (-2.5, 2.5)
-		PhysicalArea surgery1 = new PhysicalArea(-7.5f,2.5f,5,5, 20, 0);
+		PhysicalArea surgery1 = new PhysicalArea(-7.5f, -2.5f,5,5, 20, 0);
 		surgery1.addWall(-7.5f, -2.5f, 2.5f, 'h', e, Color.YELLOW);
 				
 		surgery1.addWall(-2.5f, 1.25f, 2.5f, 'h', e, Color.BLUE);
