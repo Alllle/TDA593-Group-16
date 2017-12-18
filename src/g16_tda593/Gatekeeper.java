@@ -12,7 +12,6 @@ public class Gatekeeper extends LocationController {
 
 	public Gatekeeper(Point pos, double radius, EnvironmentDescription wd) {
 		super(pos, radius, wd);
-		// TODO Auto-generated constructor stub
 		this.position = pos;
 		this.radius = radius;
 	}

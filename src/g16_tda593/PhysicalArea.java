@@ -21,8 +21,8 @@ public class PhysicalArea extends Area {
 		super(span, reward);
 	}
 
-	public PhysicalArea(float f, float g, float h, float i, int reward) {
-		super(f,g,h,i, reward);
+	public PhysicalArea(float f, float g, float h, float i, int reward, int id) {
+		super(f,g,h,i, reward, id);
 	}
 
 	/**

@@ -119,8 +119,14 @@ public class Main {
 		/*
 		 * Assignment 5 room
 		 * */
-		PhysicalArea surgery1 = new PhysicalArea(-7.5f,-2.5f,5,5, 20);
-		surgery1.addWall(-7.5f, -2.5f, 2.5f, 'h', e, Color.BLUE);
+		
+		// Första y-led negativt toppen
+		// andra x-led negativt höger
+		// tredje x-led vänster
+		// 2a start 3e stop av vägg längd
+		// (-7.5, 2.5) (-7.5, -2.5) (-2.5, -2.5) (-2.5, 2.5)
+		PhysicalArea surgery1 = new PhysicalArea(-7.5f,2.5f,5,5, 20, 0);
+		surgery1.addWall(-7.5f, -2.5f, 2.5f, 'h', e, Color.YELLOW);
 				
 		surgery1.addWall(-2.5f, 1.25f, 2.5f, 'h', e, Color.BLUE);
 		surgery1.addWall(-2.5f, -2.5f, -1.25f, 'h', e, Color.BLUE);
@@ -130,7 +136,7 @@ public class Main {
 			
 		surgery1.addWall(-2.5f, -7.5f, -2.5f, 'v', e, Color.BLUE);
 		
-		PhysicalArea surgery2 = new PhysicalArea(-2.5f,-7.5f,5,5, 20);
+		PhysicalArea surgery2 = new PhysicalArea(-2.5f,-7.5f,5,5, 20, 1);
 		surgery2.addWall(2.5f, -7.5f, -2.5f, 'h', e, Color.RED);
 				
 		surgery2.addWall(-2.5f, -7.5f, -2.5f, 'h', e, Color.RED);
@@ -141,7 +147,7 @@ public class Main {
 		surgery2.addWall(-2.5f, -2.5f, -1.25f, 'v', e, Color.RED);
 		surgery2.addWall(-2.5f, 1.25f, 2.5f, 'v', e, Color.RED);
 		
-		PhysicalArea surgery3 = new PhysicalArea(-2.5f,2.5f,5,5, 20);
+		PhysicalArea surgery3 = new PhysicalArea(-2.5f,2.5f,5,5, 20, 2);
 		surgery3.addWall(2.5f, 2.5f, 7.5f, 'h', e, Color.PINK);
 				
 		surgery3.addWall(-2.5f, 2.5f, 7.5f, 'h', e, Color.PINK);
@@ -152,7 +158,7 @@ public class Main {
 		surgery3.addWall(2.5f, -2.5f, -1.25f, 'v', e, Color.PINK);
 		surgery3.addWall(2.5f, 1.25f, 2.5f, 'v', e, Color.PINK);
 		
-		PhysicalArea surgery4 = new PhysicalArea(2.5f,-2.5f,5f, 5f, 20);
+		PhysicalArea surgery4 = new PhysicalArea(2.5f,-2.5f,5f, 5f, 20,3 );
 		surgery4.addWall(7.5f, -2.5f, 2.5f, 'h', e, Color.ORANGE);
 		
 		surgery4.addWall(2.5f, -2.5f, -1.25f, 'h', e, Color.ORANGE);
@@ -161,11 +167,13 @@ public class Main {
 		surgery4.addWall(2.5f, 2.5f, 7.5f, 'v', e, Color.ORANGE);
 		surgery4.addWall(-2.5f, 2.5f, 7.5f, 'v', e, Color.ORANGE);
 		
-		PhysicalArea consult = new PhysicalArea(-7.5f,-2.5f,5,5f, 20);
+		PhysicalArea consult = new PhysicalArea(-2.5f,-2.5f,5,5f, 20, 4);
 			
 		
-		LogicalArea wifi = new LogicalArea(-2.5f,-2.5f,5,5, 10);
-		LogicalArea eatingArea = new LogicalArea(5,10,-2.5f,2.5f, 20);
+		LogicalArea wifi = new LogicalArea(-2.5f,-2.5f,5,5, 10, 5);
+		LogicalArea eatingArea = new LogicalArea(5,10,-2.5f,2.5f, 20, 6);
+		
+		
 		
 		Environment environment = new Environment(e);
 		environment.addRoom(consult);
@@ -177,6 +185,13 @@ public class Main {
 		environment.addRoom(eatingArea);
 		
 		Controller controller = new Controller(robots, environment.getEnvironment(), environment);
+		
+		controller.addArea(consult);
+		controller.addArea(surgery1);
+		controller.addArea(surgery2);
+		controller.addArea(surgery3);
+		controller.addArea(surgery4);
+
 		
 		controller.addLocationController(new Gatekeeper(new Point(0, -5), 3, e));
 		controller.addLocationController(new Gatekeeper(new Point(-5, 0), 3, e));
@@ -194,16 +209,6 @@ public class Main {
 		controller.executeMission(robot3);
 		controller.executeMission(robot4);
 		
-		/*System.out.println("MISSIONS FROM CONTROLLER LIST " + controller.getMissions().size());
-		
-		int tempCount = 0;
-		for(RobotAvatar r : robots) {
-			controller.addMissionToRobot(controller.getMissions().get(tempCount), r);
-			System.out.println("Robot: " + r.getId() + " is getting mission: " + controller.getMissions().get(tempCount).getId());
-			System.out.println("Mission length in main is: " + controller.getMissions().get(tempCount).getPoints().size());
-			tempCount++;
-			controller.executeMission(r);
-		}*/
 	
 	}
 }

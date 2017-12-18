@@ -49,7 +49,6 @@ public class RewardSystem extends TimerTask {
 	private void calculatePoints() {
 		System.out.println("is it an empty list of areas? " + areas.size());
 		for(Area a : areas) {
-			//System.out.println("is it a physical area? " + (a instanceof PhysicalArea));
 			if(a instanceof PhysicalArea && procedureA) {
 				for(RobotAvatar r : robots) {
 					if(a.containsRobot(r)) {

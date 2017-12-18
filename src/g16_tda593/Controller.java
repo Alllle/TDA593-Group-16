@@ -32,6 +32,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	 */
 	private List<View> views;
 	
+	private List<Area> areas;
 	private Timer rewardTimer;
 	private Timer strategyTimer;
 	/**
@@ -58,7 +59,6 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	public Controller(Set<RobotAvatar> robots, EnvironmentDescription e, Environment environment) {
 		super(robots, e);
 		views = new ArrayList<View>();
-		//missions = new ArrayList<Mission>();
 		this.robots = robots;
 		gatekeepers = new ArrayList<Gatekeeper>();
 		this.environment = environment;
@@ -66,11 +66,12 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		rewardTimer = new Timer();
 		init();
 		this.strategyTimer = new Timer();
+		areas = new ArrayList<>();
 	}
 	
 	private void init() {
 		/*20000 = 20 SECONDS, CHANGE THIS IF YOU WANT A DIFFERENT UPDATE RATE OF REWARDPOINTS*/
-		rewardTimer.scheduleAtFixedRate(rs, 10000, 10000);
+		rewardTimer.scheduleAtFixedRate(rs, 20000, 20000);
 	}
 	
 	public double distance(RobotAvatar r, Gatekeeper gk) {
@@ -87,12 +88,10 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 					if(!robot.getStrategy().isLocked()) {
 						robot.getStrategy().setCurrentTime(System.currentTimeMillis());
 						robot.getStrategy().setLocked(true);
-					} if(robot.getStrategy().isLocked() == true && System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
-						robot.setDestination(robot.getPosition());
-					} else {
+					} else if(System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
+						robot.getStrategy().setLocked(false);
 						robot.getMission().getPoints().pop();
 						executeMission(robot);
-						robot.getStrategy().setLocked(false);
 					}
 				}
 				else {
@@ -100,6 +99,10 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 					executeMission(robot);
 				}
 			} else {
+				if(robot.getStrategy().isLocked() && System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
+					robot.getStrategy().setLocked(false);
+					System.out.println("Do we get in here now?");
+				}
 				executeMission(robot);
 			}
 		}
@@ -108,7 +111,6 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 			if(distance(robot, k) < k.getRadius()) {
 				if(!k.tryAcquire(robot) && k.getOwner().getId() != robot.getId()){
 					robot.setDestination(robot.getPosition());
-					//System.out.println("Robot " + robot.getId() + " is stuck");
 				} else if(k.getOwner() == null) {
 					k.setOwner(robot);
 				} else if(k.getOwner().getId() != robot.getId()) {
@@ -119,6 +121,19 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 				if(distance(robot, k) > k.getRadius()) {
 					k.release(robot);
 					k.setOwner(null);
+				}
+			}
+		}
+		
+		for(Area a : areas) {
+			if(a.containsRobot(robot) && a instanceof PhysicalArea) {
+				if(robot.getCurrentArea() == null) {
+					robot.setCurrentArea(a);
+				} else if(robot.getCurrentArea().getId() != a.getId()) {
+					robot.setCurrentArea(a);
+					robot.getStrategy().setCurrentTime(System.currentTimeMillis());
+					robot.getStrategy().setLocked(true);
+					robot.setDestination(robot.getPosition());
 				}
 			}
 		}
@@ -152,7 +167,10 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		} else if(robot.getMission() == null || robot.getMission().getPoints().isEmpty()) {
 			robot.setDestination(robot.getPosition());
 			return;
-		} else {
+		} else if(robot.getStrategy().isLocked()) {
+			robot.setDestination(robot.getPosition());
+			return;
+		} else{
 			Point currentPoint = (Point) robot.getMission().getPoints().peek();
 			robot.setDestination(currentPoint);
 		}
@@ -164,13 +182,6 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	 */
 	public void registerView(View view) {
 	}
-
-	/**
-	 * for each v in views, v.updateRobots(robots)
-	 */
-	/*@Override
-	public void notify() {
-	}*/
 
 	/**
 	 * 
@@ -196,5 +207,9 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		for(AbstractRobotSimulator r : robots) {
 			((RobotAvatar) r).setMission(null);
 		}
+	}
+	
+	public void addArea(Area a) {
+		areas.add(a);
 	}
 };

@@ -17,10 +17,10 @@ import g16_tda593.Sensors;
  * 
  */
 public class RobotAvatar extends AbstractRobotSimulator {
+
 	
 	public RobotAvatar(Point position, String name) {
 		super(position, name);
-		// TODO Auto-generated constructor stub
 		sensors.add(new GPS());
 		robotId = name;
 		this.strategy = null;
@@ -28,11 +28,12 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	
 	public RobotAvatar(Point position, String name, Strategy strategy) {
 		super(position, name);
-		// TODO Auto-generated constructor stub
 		this.sensors.add(new GPS());
 		robotId = name;
 		this.strategy = strategy;
 	}
+	
+	private Area currentArea;
 	
 	/**
 	 * 
@@ -96,5 +97,13 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	public void setMission(Mission m) {
 		System.out.println("Mission added to robot: " + robotId);
 		this.mission = m;
+	}
+	
+	public void setCurrentArea(Area a) {
+		this.currentArea = a;
+	}
+	
+	public Area getCurrentArea() {
+		return this.currentArea;
 	}
 };

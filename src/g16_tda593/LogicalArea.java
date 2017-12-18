@@ -17,8 +17,8 @@ public class LogicalArea extends Area {
 		super(span, reward);
 	}
 
-	public LogicalArea(float f, float g, float h, float i, int reward) {
-		super(f,g,h,i, reward);
+	public LogicalArea(float f, float g, float h, float i, int reward, int id) {
+		super(f,g,h,i, reward, id);
 	}
 	/**
 	 * 
