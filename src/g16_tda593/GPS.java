@@ -20,7 +20,7 @@ public class GPS implements Sensors {
 	public Point getValue() {
 		return this.value;
 	}
-	public void newGPSpositionChangeDetected(Point p) {
+	public void setValue(Point p) {
 		this.value = p;
 	}
 };
