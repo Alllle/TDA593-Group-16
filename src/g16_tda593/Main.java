@@ -21,10 +21,10 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		
 		Set<RobotAvatar> robots = new HashSet<RobotAvatar>();
-		RobotAvatar robot1 = new RobotAvatar(new Point(-5, 0), "Robot 1", new Strategy());
-		RobotAvatar robot2 = new RobotAvatar(new Point(0, -5), "Robot 2", new Strategy());
-		RobotAvatar robot3 = new RobotAvatar(new Point(0, 5), "Robot 3", new Strategy());
-		RobotAvatar robot4 = new RobotAvatar(new Point(5, 0), "Robot 4", new Strategy());
+		RobotAvatar robot1 = new RobotAvatar(new Point(-5, 0), "Robot 1", new WaitStrategy());
+		RobotAvatar robot2 = new RobotAvatar(new Point(0, -5), "Robot 2", new WaitStrategy());
+		RobotAvatar robot3 = new RobotAvatar(new Point(0, 5), "Robot 3", new WaitStrategy());
+		RobotAvatar robot4 = new RobotAvatar(new Point(5, 0), "Robot 4", new WaitStrategy());
 		
 		Mission mission1 = new Mission(1);
 		mission1.addPoint(new Point(0, 0));

@@ -33,7 +33,6 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	private List<View> views;
 	
 	private Timer rewardTimer;
-	private Timer strategyTimer;
 	/**
 	 * 
 	 */
@@ -62,40 +61,57 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		this.robots = robots;
 		gatekeepers = new ArrayList<Gatekeeper>();
 		this.environment = environment;
-		rs = new RewardSystem(environment.getAreas(), robots);
+		rs = new RewardSystem();
 		rewardTimer = new Timer();
-		init();
-		this.strategyTimer = new Timer();
-	}
-	
-	private void init() {
 		/*20000 = 20 SECONDS, CHANGE THIS IF YOU WANT A DIFFERENT UPDATE RATE OF REWARDPOINTS*/
 		rewardTimer.scheduleAtFixedRate(rs, 10000, 10000);
 	}
+	
 	
 	public double distance(RobotAvatar r, Gatekeeper gk) {
 		double distance = Math.hypot(r.getPosition().getX() - gk.getCenter().getX(),
 				r.getPosition().getZ() - gk.getCenter().getZ());
 		return distance;
 	}
+	
+	private void calculatePoints() {
+		System.out.println("is it an empty list of areas? " + environment.getAreas().size());
+		for(Area a : environment.getAreas()) {
+			//System.out.println("is it a physical area? " + (a instanceof PhysicalArea));
+			if(a instanceof PhysicalArea && rs.getProcedure()) {
+				for(RobotAvatar r : robots) {
+					if(a.containsRobot(r)) {
+						rs.setRewardPoint(rs.getRewardPoint() + a.getReward());
+					}
+				}
+			} else if(a instanceof LogicalArea && !rs.getProcedure()) {
+				for(RobotAvatar r : robots) {
+					if(a.containsRobot(r)) {
+						rs.setRewardPoint(rs.getRewardPoint() + a.getReward());
+					}
+				}
+			}	
+		}
+	}
 
 	@Override
 	public void update(RobotAvatar robot) {
 		if(!robot.getMission().getPoints().isEmpty()) {
 			if(robot.isAtPosition(robot.getMission().getPoints().peek())) {
-				if(robot.getStrategy() != null) {	
-					if(!robot.getStrategy().isLocked()) {
-						robot.getStrategy().setCurrentTime(System.currentTimeMillis());
-						robot.getStrategy().setLocked(true);
-					} if(robot.getStrategy().isLocked() == true && System.currentTimeMillis() < robot.getStrategy().getCurrentTime() + 2000) {
+				if(robot.getStrategy() instanceof WaitStrategy) {	
+					WaitStrategy waitStrategy = (WaitStrategy) robot.getStrategy();
+					if(!waitStrategy.isLocked()) {
+						waitStrategy.setCurrentTime(System.currentTimeMillis());
+						waitStrategy.setLocked(true);
+					} if(waitStrategy.isLocked() == true && System.currentTimeMillis() < waitStrategy.getCurrentTime() + 2000) {
 						robot.setDestination(robot.getPosition());
 					} else {
 						robot.getMission().getPoints().pop();
 						executeMission(robot);
-						robot.getStrategy().setLocked(false);
+						waitStrategy.setLocked(false);
 					}
 				}
-				else {
+				else if(robot.getStrategy() instanceof NormalStrategy) {
 					robot.getMission().getPoints().pop();
 					executeMission(robot);
 				}

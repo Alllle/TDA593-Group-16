@@ -23,7 +23,7 @@ public class RobotAvatar extends AbstractRobotSimulator {
 		// TODO Auto-generated constructor stub
 		sensors.add(new GPS());
 		robotId = name;
-		this.strategy = null;
+		this.strategy = new NormalStrategy();
 	}
 	
 	public RobotAvatar(Point position, String name, Strategy strategy) {

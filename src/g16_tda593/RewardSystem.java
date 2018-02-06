@@ -13,14 +13,6 @@ import java.util.TimerTask;
  * 
  */
 public class RewardSystem extends TimerTask {
-	private List<Area> areas;
-	private Set<RobotAvatar> robots;
-	
-	public RewardSystem(List<Area> areas, Set<RobotAvatar> robots) {
-		this.areas = areas;
-		this.robots = robots;
-	}
-	
 	/**
 	 * 
 	 */
@@ -45,32 +37,15 @@ public class RewardSystem extends TimerTask {
 	public int getRewardPoint() {
 		return this.rewardPoint;
 	}
-	
-	private void calculatePoints() {
-		System.out.println("is it an empty list of areas? " + areas.size());
-		for(Area a : areas) {
-			//System.out.println("is it a physical area? " + (a instanceof PhysicalArea));
-			if(a instanceof PhysicalArea && procedureA) {
-				for(RobotAvatar r : robots) {
-					if(a.containsRobot(r)) {
-						rewardPoint = rewardPoint + a.getReward();
-					}
-				}
-			} else if(a instanceof LogicalArea && !procedureA) {
-				for(RobotAvatar r : robots) {
-					if(a.containsRobot(r)) {
-						rewardPoint = rewardPoint + a.getReward();
-					}
-				}
-			}	
-		}
+	public void setRewardPoint(int i) {
+		rewardPoint = i;
 	}
-
+	public boolean getProcedure() {
+		return procedureA;
+	}
 	@Override
 	public void run() {
-		calculatePoints();
 		System.out.println("Current rewardpoints are: " + getRewardPoint());
-		setProcedure(!procedureA);
 		System.out.println("Rewardpoints is running procedure A: " + procedureA);
 	}
 };
