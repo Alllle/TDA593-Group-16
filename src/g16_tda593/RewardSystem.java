@@ -46,7 +46,7 @@ public class RewardSystem extends TimerTask {
 	//
 	@Override
 	public void run() {
-		System.out.println("Current rewardpoints are: " + getRewardPoint());
-		System.out.println("Rewardpoints is running procedure A: " + procedureA);
+		//System.out.println("Current rewardpoints are: " + getRewardPoint());
+		//System.out.println("Rewardpoints is running procedure A: " + procedureA);
 	}
 };
