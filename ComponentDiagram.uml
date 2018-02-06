@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_-9F8QAscEei8Mqa_LdE0hg" name="ComponentDiagram">
+  <packagedElement xmi:type="uml:Model" xmi:id="_By5rwAsdEei8Mqa_LdE0hg" name="Model">
+    <packagedElement xmi:type="uml:Component" xmi:id="_pIhqcAshEei8Mqa_LdE0hg" name="Procedure"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_efYsEAsiEei8Mqa_LdE0hg" name="Strategy"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_9a5iAAsiEei8Mqa_LdE0hg" name="RewardSystem"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_c5qEYAsiEei8Mqa_LdE0hg" name="Area"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_2qae8AsdEei8Mqa_LdE0hg" name="Controll">
+    <packagedElement xmi:type="uml:Component" xmi:id="_xaR6sAsgEei8Mqa_LdE0hg" name="Sensor"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_WjLf8AshEei8Mqa_LdE0hg" name="GPS"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_fQo_UAshEei8Mqa_LdE0hg" name="Controller"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_4sdAcAsjEei8Mqa_LdE0hg" name="GateKeeperInt"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_lUk_EAseEei8Mqa_LdE0hg" name="View">
+    <packagedElement xmi:type="uml:Component" xmi:id="_otKrgAseEei8Mqa_LdE0hg" name="TextOutput"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_qJyuoAsrEei8Mqa_LdE0hg" name="Viewable"/>
+  </packagedElement>
+</uml:Model>
