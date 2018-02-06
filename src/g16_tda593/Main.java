@@ -187,23 +187,6 @@ public class Main {
 		//Locationcontrollers for assignment 3
 		//controller.addLocationController(new Gatekeeper(new Point(3, 3.5), 3, e));
 		//controller.addLocationController(new Gatekeeper(new Point(3, -3.5), 3, e));
-		
-		
-		controller.executeMission(robot1);
-		controller.executeMission(robot2);
-		controller.executeMission(robot3);
-		controller.executeMission(robot4);
-		
-		/*System.out.println("MISSIONS FROM CONTROLLER LIST " + controller.getMissions().size());
-		
-		int tempCount = 0;
-		for(RobotAvatar r : robots) {
-			controller.addMissionToRobot(controller.getMissions().get(tempCount), r);
-			System.out.println("Robot: " + r.getId() + " is getting mission: " + controller.getMissions().get(tempCount).getId());
-			System.out.println("Mission length in main is: " + controller.getMissions().get(tempCount).getPoints().size());
-			tempCount++;
-			controller.executeMission(r);
-		}*/
 	
 	}
 }

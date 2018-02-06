@@ -57,6 +57,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	public Controller(Set<RobotAvatar> robots, EnvironmentDescription e, Environment environment) {
 		super(robots, e);
 		views = new ArrayList<View>();
+		views.add(new TextOutput());
 		//missions = new ArrayList<Mission>();
 		this.robots = robots;
 		gatekeepers = new ArrayList<Gatekeeper>();
@@ -65,6 +66,13 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		rewardTimer = new Timer();
 		/*20000 = 20 SECONDS, CHANGE THIS IF YOU WANT A DIFFERENT UPDATE RATE OF REWARDPOINTS*/
 		rewardTimer.scheduleAtFixedRate(rs, 10000, 10000);
+		
+		//Print out robots in views
+		for(RobotAvatar r : robots) {
+			for(View v : views)
+				v.printRobotAdded(r.getId());
+			executeMission(r);
+		}
 	}
 	
 	
@@ -74,20 +82,23 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		return distance;
 	}
 	
+	//TODO make it execute at tick. Dont forget to alternate procedure
 	private void calculatePoints() {
-		System.out.println("is it an empty list of areas? " + environment.getAreas().size());
 		for(Area a : environment.getAreas()) {
-			//System.out.println("is it a physical area? " + (a instanceof PhysicalArea));
 			if(a instanceof PhysicalArea && rs.getProcedure()) {
 				for(RobotAvatar r : robots) {
 					if(a.containsRobot(r)) {
 						rs.setRewardPoint(rs.getRewardPoint() + a.getReward());
+						for(View v : views)
+							v.printReward(rs.getRewardPoint(), rs.getProcedure());
 					}
 				}
 			} else if(a instanceof LogicalArea && !rs.getProcedure()) {
 				for(RobotAvatar r : robots) {
 					if(a.containsRobot(r)) {
 						rs.setRewardPoint(rs.getRewardPoint() + a.getReward());
+						for(View v : views)
+							v.printReward(rs.getRewardPoint(), rs.getProcedure());
 					}
 				}
 			}	
@@ -124,7 +135,6 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 			if(distance(robot, k) < k.getRadius()) {
 				if(!k.tryAcquire(robot) && k.getOwner().getId() != robot.getId()){
 					robot.setDestination(robot.getPosition());
-					//System.out.println("Robot " + robot.getId() + " is stuck");
 				} else if(k.getOwner() == null) {
 					k.setOwner(robot);
 				} else if(k.getOwner().getId() != robot.getId()) {
@@ -163,7 +173,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 	 */
 	public void executeMission(RobotAvatar robot) {
 		if(robot == null) {
-			System.out.println("Robot is null");
+			System.out.println("Error: Robot is null");
 			return;
 		} else if(robot.getMission() == null || robot.getMission().getPoints().isEmpty()) {
 			robot.setDestination(robot.getPosition());

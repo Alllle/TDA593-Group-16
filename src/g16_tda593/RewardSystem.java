@@ -43,6 +43,7 @@ public class RewardSystem extends TimerTask {
 	public boolean getProcedure() {
 		return procedureA;
 	}
+	//
 	@Override
 	public void run() {
 		System.out.println("Current rewardpoints are: " + getRewardPoint());

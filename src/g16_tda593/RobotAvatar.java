@@ -94,7 +94,6 @@ public class RobotAvatar extends AbstractRobotSimulator {
 	}
 	
 	public void setMission(Mission m) {
-		System.out.println("Mission added to robot: " + robotId);
 		this.mission = m;
 	}
 };

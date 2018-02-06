@@ -14,17 +14,7 @@ import g16_tda593.RobotAvatar;
  * 
  */
 public interface View {
-	/**
-	 * 
-	 */
-	/*public Controller controller;
-	/**
-	 * 
-	 */
-	/*public int rewardPoints;
-	/**
-	 * 
-	 * @param robots 
-	 */
-	public void updateRobots(Set<RobotAvatar> robots);
+	//We have an interface in case we want to implement more views.
+	public void printReward(int rewardPoints, boolean procedure);
+	public void printRobotAdded(String robotID);
 };

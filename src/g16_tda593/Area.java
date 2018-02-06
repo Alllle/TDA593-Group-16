@@ -54,9 +54,6 @@ public abstract class Area {
 	}
 	
 	public boolean containsRobot(RobotAvatar r) {
-		//System.out.println("Position of robot is: X: " + r.getPosition().getX() + " Z: " + r.getPosition().getZ());
-		//System.out.println("Span is between " + span.x1 + " to " + span.x2 + " in X direction");
-		//System.out.println("Span is between " + span.y1 + " to " + span.y2 + " in Y direction");
 		if((r.getPosition().getX() >= span.x1 && r.getPosition().getX() <= span.x2) &&
 				(r.getPosition().getZ() >= span.y1 && r.getPosition().getZ() <= span.y2)){
 			System.out.println("There is a motherfuckin robot in here");
