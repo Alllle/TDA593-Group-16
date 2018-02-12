@@ -42,6 +42,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
   }
  
 
+
   public int getRewardPoints(){
     return rwc.getRewardPoints();
   }

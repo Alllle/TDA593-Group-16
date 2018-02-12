@@ -62,7 +62,7 @@ public class Controller extends AbstractSimulatorMonitor<RobotAvatar> {
 		this.robots = robots;
 		gatekeepers = new ArrayList<Gatekeeper>();
 		this.environment = environment;
-		rs = new RewardSystem(environment.getAreas(), robots);
+		//rs = new RewardSystem(environment.getAreas(), robots);
 		rewardTimer = new Timer();
 		init();
 		this.strategyTimer = new Timer();

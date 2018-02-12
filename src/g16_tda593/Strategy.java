@@ -17,5 +17,4 @@ public interface Strategy {
   public long getCapturedDate();
 
   public void changeMissionPoints(List<Point> missionPoints);
-
 }

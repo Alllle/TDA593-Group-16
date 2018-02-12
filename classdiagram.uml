@@ -54,7 +54,7 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_nV9ZotW4Eee_uKo27O12zg" name="robot" type="_v7LdUNSXEeefPZdaWwFbGA" association="_nV5IMNW4Eee_uKo27O12zg"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_9sHjUNW4Eee_uKo27O12zg" name="mvc">
+  <packagedElement xmi:type="uml:Package" xmi:id="_9sHjUNW4Eee_uKo27O12zg" name="g">
     <packagedElement xmi:type="uml:Class" xmi:id="_uRxPgNSXEeefPZdaWwFbGA" name="Controller">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_TtQqsNTGEeefPZdaWwFbGA" name="views" visibility="private" type="_PXNw8NSZEeefPZdaWwFbGA" isReadOnly="true">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WbWBkNTGEeefPZdaWwFbGA" value="1"/>
@@ -236,7 +236,7 @@
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_udBhYNVUEeefPZdaWwFbGA" client="_s2Gm4NVUEeefPZdaWwFbGA" supplier="__gA6kNVPEeefPZdaWwFbGA" contract="__gA6kNVPEeefPZdaWwFbGA"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_cqOgoOH2Eee2pMJEOATYog" name="getValue">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cqOgoeH2Eee2pMJEOATYog">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cqOgoeH2Eee2pMJEOATYog" direction="return">
           <type xmi:type="uml:Class" href="tda593_Group_16.uml#_kvLnAM6ZEeeexou2H9X39g"/>
         </ownedParameter>
       </ownedOperation>
