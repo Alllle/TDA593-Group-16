@@ -9,6 +9,7 @@ import java.util.Set;
 import project.Point;
 import project.AbstractRobotSimulator;
 import project.AbstractSimulatorMonitor;
+import project.LocationController;
 import simbad.sim.AbstractWall;
 import simbad.sim.Boundary;
 import simbad.sim.EnvironmentDescription;
@@ -21,44 +22,42 @@ public class Main {
 	public static void main(String[] args) throws InterruptedException {
 		
 		Set<RobotAvatar> robots = new HashSet<RobotAvatar>();
-		RobotAvatar robot1 = new RobotAvatar(new Point(-5, 0), "Robot 1", new Strategy());
-		RobotAvatar robot2 = new RobotAvatar(new Point(0, -5), "Robot 2", new Strategy());
-		RobotAvatar robot3 = new RobotAvatar(new Point(0, 5), "Robot 3", new Strategy());
-		RobotAvatar robot4 = new RobotAvatar(new Point(5, 0), "Robot 4", new Strategy());
 		
-		Mission mission1 = new Mission(1);
-		mission1.addPoint(new Point(0, 0));
-		mission1.addPoint(new Point(-5, 0));
+		List<Point> mission1 = new LinkedList<Point>();
+		List<Point> mission2 = new LinkedList<Point>();
+		List<Point> mission3 = new LinkedList<Point>();
+		List<Point> mission4 = new LinkedList<Point>();
+
 		
-		Mission mission2 = new Mission(2);
-		mission2.addPoint(new Point(0, 0));
-		mission2.addPoint(new Point(0, -5));
 		
-		Mission mission3 = new Mission(3);
-		mission3.addPoint(new Point(0, 0));
-		mission3.addPoint(new Point(0, 5));
+		mission1.add(new Point(0, 0));
+		mission1.add(new Point(0, -5));
+		Strategy s1 = new WaitStrategy(mission1);
+		RobotAvatar robot1 = new RobotAvatar(new Point(0, -5), "Robot 1", s1);
 		
-		Mission mission4 = new Mission(4);
-		mission4.addPoint(new Point(0, 0));
-		mission4.addPoint(new Point(5, 0));
+		mission2.add(new Point(0, 0));
+		mission2.add(new Point(-5, 0));
+		Strategy s2 = new WaitStrategy(mission2);
+
+		RobotAvatar robot2 = new RobotAvatar(new Point(-5, 0), "Robot 2", s2);
 		
-		robot1.setMission(mission1);
-		robot2.setMission(mission2);
-		robot3.setMission(mission3);
-		robot4.setMission(mission4);
+		mission3.add(new Point(0, 0));
+		mission3.add(new Point(5, 0));
+		Strategy s3 = new WaitStrategy(mission3);
+
+		RobotAvatar robot3 = new RobotAvatar(new Point(5, 0), "Robot 3", s3);
+		
+		mission4.add(new Point(0, 0));
+		mission4.add(new Point(0, 5));
+		Strategy s4 = new WaitStrategy(mission4);
+
+		RobotAvatar robot4 = new RobotAvatar(new Point(0, 5), "Robot 4", s4);
+		//System.out.println(robot4.getStrategy().getMissionPoints() + " is the miss");
 		
 		robots.add(robot1);
 		robots.add(robot2);
 		robots.add(robot3);
 		robots.add(robot4);
-		/*robots.add(new RobotAvatar(new Point(0, -4), "1"));
-		robots.add(new RobotAvatar(new Point(0, -2), "2"));
-		robots.add(new RobotAvatar(new Point(0, 0), "3"));
-		robots.add(new RobotAvatar(new Point(6, 2), "4"));*/
-		
-		
-		//EnvironmentDescription e1 = new EnvironmentDescription();
-		//AbstractWall a = new HorizontalWall(5f,5f,5f,e1, Color.black);
 		
 		//Create environment!
 		EnvironmentDescription e = new EnvironmentDescription();
@@ -125,90 +124,69 @@ public class Main {
 		// tredje x-led vänster
 		// 2a start 3e stop av vägg längd
 		// (-7.5, 2.5) (-7.5, -2.5) (-2.5, -2.5) (-2.5, 2.5)
-		PhysicalArea surgery1 = new PhysicalArea(-7.5f, -2.5f,5,5, 20, 0);
-		surgery1.addWall(-7.5f, -2.5f, 2.5f, 'h', e, Color.YELLOW);
-				
-		surgery1.addWall(-2.5f, 1.25f, 2.5f, 'h', e, Color.BLUE);
-		surgery1.addWall(-2.5f, -2.5f, -1.25f, 'h', e, Color.BLUE);
-				
-		//Bottom wall
-		surgery1.addWall(2.5f, -7.5f, -2.5f, 'v', e, Color.BLUE);
-			
-		surgery1.addWall(-2.5f, -7.5f, -2.5f, 'v', e, Color.BLUE);
-		
-		PhysicalArea surgery2 = new PhysicalArea(-2.5f,-7.5f,5,5, 20, 1);
-		surgery2.addWall(2.5f, -7.5f, -2.5f, 'h', e, Color.RED);
-				
-		surgery2.addWall(-2.5f, -7.5f, -2.5f, 'h', e, Color.RED);
+		Area surgery1 = new PhysicalArea(new Point(-5, 0), 2.5);
+		AbstractWall h1 = new HorizontalWall(-7.5f, -2.5f, 2.5f,e, Color.BLUE);
+		AbstractWall h2 = new HorizontalWall(-2.5f, 1.25f, 2.5f,e, Color.BLUE);
+		AbstractWall h3 = new HorizontalWall(-2.5f, -2.5f, -1.25f,e, Color.BLUE);
 				
 		//Bottom wall
-		surgery2.addWall(-7.5f, -2.5f, 2.5f, 'v', e, Color.RED);
-			
-		surgery2.addWall(-2.5f, -2.5f, -1.25f, 'v', e, Color.RED);
-		surgery2.addWall(-2.5f, 1.25f, 2.5f, 'v', e, Color.RED);
+		AbstractWall v1 = new VerticalWall(2.5f, -7.5f, -2.5f,e, Color.BLUE);
+		AbstractWall v2 = new VerticalWall(-2.5f, -7.5f, -2.5f,e, Color.BLUE);
 		
-		PhysicalArea surgery3 = new PhysicalArea(-2.5f,2.5f,5,5, 20, 2);
-		surgery3.addWall(2.5f, 2.5f, 7.5f, 'h', e, Color.PINK);
-				
-		surgery3.addWall(-2.5f, 2.5f, 7.5f, 'h', e, Color.PINK);
+		
+		PhysicalArea surgery2 = new PhysicalArea(new Point(0, -5), 2.5);
+		AbstractWall h4 = new HorizontalWall(2.5f, -7.5f, -2.5f,e, Color.RED);
+		AbstractWall h5 = new HorizontalWall(-2.5f, -7.5f, -2.5f,e, Color.RED);
 				
 		//Bottom wall
-		surgery3.addWall(7.5f, -2.5f, 2.5f, 'v', e, Color.PINK);
-			
-		surgery3.addWall(2.5f, -2.5f, -1.25f, 'v', e, Color.PINK);
-		surgery3.addWall(2.5f, 1.25f, 2.5f, 'v', e, Color.PINK);
-		
-		PhysicalArea surgery4 = new PhysicalArea(2.5f,-2.5f,5f, 5f, 20,3 );
-		surgery4.addWall(7.5f, -2.5f, 2.5f, 'h', e, Color.ORANGE);
-		
-		surgery4.addWall(2.5f, -2.5f, -1.25f, 'h', e, Color.ORANGE);
-		surgery4.addWall(2.5f, 1.25f, 2.5f, 'h', e, Color.ORANGE);
-		
-		surgery4.addWall(2.5f, 2.5f, 7.5f, 'v', e, Color.ORANGE);
-		surgery4.addWall(-2.5f, 2.5f, 7.5f, 'v', e, Color.ORANGE);
-		
-		PhysicalArea consult = new PhysicalArea(-2.5f,-2.5f,5,5f, 20, 4);
-			
-		
-		LogicalArea wifi = new LogicalArea(-2.5f,-2.5f,5,5, 10, 5);
-		LogicalArea eatingArea = new LogicalArea(5,10,-2.5f,2.5f, 20, 6);
+		AbstractWall v3 = new VerticalWall(-7.5f, -2.5f, 2.5f,e, Color.RED);
+		AbstractWall v4 = new VerticalWall(-2.5f, -2.5f, -1.25f,e, Color.RED);
+		AbstractWall v5 = new VerticalWall(-2.5f, 1.25f, 2.5f,e, Color.RED);
 		
 		
-		
-		Environment environment = new Environment(e);
-		environment.addRoom(consult);
-		environment.addRoom(surgery1);
-		environment.addRoom(surgery2);
-		environment.addRoom(surgery3);
-		environment.addRoom(surgery4);
-		environment.addRoom(wifi);
-		environment.addRoom(eatingArea);
-		
-		Controller controller = new Controller(robots, environment.getEnvironment(), environment);
-		
-		controller.addArea(consult);
-		controller.addArea(surgery1);
-		controller.addArea(surgery2);
-		controller.addArea(surgery3);
-		controller.addArea(surgery4);
+		PhysicalArea surgery3 = new PhysicalArea(new Point(5, 0), 2.5);
+		AbstractWall h6 = new HorizontalWall(2.5f, 2.5f, 7.5f,e, Color.PINK);
+		AbstractWall h7 = new HorizontalWall(-2.5f, 2.5f, 7.5f,e, Color.PINK);
+				
+		//Bottom wall
+		AbstractWall v6 = new VerticalWall(7.5f, -2.5f, 2.5f,e, Color.PINK);
+		AbstractWall v7 = new VerticalWall(2.5f, -2.5f, -1.25f,e, Color.PINK);
+		AbstractWall v8 = new VerticalWall(2.5f, 1.25f, 2.5f,e, Color.PINK);
 
 		
-		controller.addLocationController(new Gatekeeper(new Point(0, -5), 3, e));
-		controller.addLocationController(new Gatekeeper(new Point(-5, 0), 3, e));
-		controller.addLocationController(new Gatekeeper(new Point(0, 5), 3, e));
-		controller.addLocationController(new Gatekeeper(new Point(5, 0), 3, e));
-		controller.addLocationController(new Gatekeeper(new Point(0, 0), 3, e));
+		PhysicalArea surgery4 = new PhysicalArea(new Point(0, 5), 2.5);
 		
-		//Locationcontrollers for assignment 3
-		//controller.addLocationController(new Gatekeeper(new Point(3, 3.5), 3, e));
-		//controller.addLocationController(new Gatekeeper(new Point(3, -3.5), 3, e));
+		AbstractWall h8 = new HorizontalWall(7.5f, -2.5f, 2.5f,e, Color.ORANGE);
+		AbstractWall h9 = new HorizontalWall(2.5f, -2.5f, -1.25f,e, Color.ORANGE);
+		AbstractWall h10 = new HorizontalWall(2.5f, 1.25f, 2.5f,e, Color.ORANGE);
+				
+		//Bottom wall
+		AbstractWall v9 = new VerticalWall(2.5f, 2.5f, 7.5f,e, Color.ORANGE);
+		AbstractWall v10 = new VerticalWall(-2.5f, 2.5f, 7.5f,e, Color.ORANGE);
+		
+		PhysicalArea consult = new PhysicalArea(new Point(0, 0), 2.5);
+			
+		
+		LogicalArea wifi = new LogicalArea(new Point(0,0), 2.5);
+		LogicalArea eatingArea = new LogicalArea(new Point(0,0), 2.5);
+		Set<Area> areas = new HashSet<Area>();
+		surgery1.setLc(new LocationController(new Point(-5, 0), 2.5, e));
+		surgery2.setLc(new LocationController(new Point(0, -5), 2.5, e));
+		surgery3.setLc(new LocationController(new Point(5, 0), 2.5, e));
+		surgery4.setLc(new LocationController(new Point(0, 5), 2.5, e));
+		consult.setLc(new LocationController(new Point(0, 0), 2.5, e));
 		
 		
-		controller.executeMission(robot1);
-		controller.executeMission(robot2);
-		controller.executeMission(robot3);
-		controller.executeMission(robot4);
-		
+		areas.add(consult);
+		areas.add(surgery1);
+		areas.add(surgery2);
+		areas.add(surgery3);
+		areas.add(surgery4);
+		areas.add(wifi);
+		areas.add(eatingArea);
+			
+
+		AbstractSimulatorMonitor controller = new Controller(areas, robots, e);		
 	
 	}
 }

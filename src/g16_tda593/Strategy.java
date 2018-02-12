@@ -1,28 +1,21 @@
 package g16_tda593;
 
-public class Strategy {
-	
-	private boolean locked;
-	private long currentTime;
-	
-	public Strategy() {
-		this.locked = false;
-	}
+import java.util.List;
 
+import project.Point;
 
-	public boolean isLocked() {
-		return locked;
-	}
+public interface Strategy {
 
-	public void setLocked(boolean locked) {
-		this.locked = locked;
-	}
+  public List<Point> getMissionPoints();
 
-	public long getCurrentTime() {
-		return currentTime;
-	}
+  public Point getNextMissionPoint();
 
-	public void setCurrentTime(long currentTime) {
-		this.currentTime = currentTime;
-	}
+  public Point executeStrategy(RobotAvatar r);
+  
+  public void setCapturedDate(long date);
+  
+  public long getCapturedDate();
+
+  public void changeMissionPoints(List<Point> missionPoints);
+
 }
